@@ -28,7 +28,7 @@ import javax.validation.constraints.Size;
     @NamedQuery(name = "Estadotrajeta.findByIdestadotrajeta", query = "SELECT e FROM Estadotrajeta e WHERE e.idestadotrajeta = :idestadotrajeta"),
     @NamedQuery(name = "Estadotrajeta.findByNombre", query = "SELECT e FROM Estadotrajeta e WHERE e.nombre = :nombre"),
     @NamedQuery(name = "Estadotrajeta.findByCodigo", query = "SELECT e FROM Estadotrajeta e WHERE e.codigo = :codigo")})
-public class Estadotrajeta implements Serializable {
+public class Estadotarjeta implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
@@ -43,10 +43,10 @@ public class Estadotrajeta implements Serializable {
     @Column(name = "codigo")
     private String codigo;
 
-    public Estadotrajeta() {
+    public Estadotarjeta() {
     }
 
-    public Estadotrajeta(Integer idestadotrajeta) {
+    public Estadotarjeta(Integer idestadotrajeta) {
         this.idestadotrajeta = idestadotrajeta;
     }
 
@@ -84,10 +84,10 @@ public class Estadotrajeta implements Serializable {
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Estadotrajeta)) {
+        if (!(object instanceof Estadotarjeta)) {
             return false;
         }
-        Estadotrajeta other = (Estadotrajeta) object;
+        Estadotarjeta other = (Estadotarjeta) object;
         if ((this.idestadotrajeta == null && other.idestadotrajeta != null) || (this.idestadotrajeta != null && !this.idestadotrajeta.equals(other.idestadotrajeta))) {
             return false;
         }
