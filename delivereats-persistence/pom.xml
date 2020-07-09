@@ -11,8 +11,8 @@
 	<groupId>co.com.myproject</groupId>
 	<artifactId>delivereats-repository</artifactId>
 	<version>1</version>
-	<name>delivereats-persistence</name>
-	<description>deliver-eat</description>
+	<name>delivereats-repository</name>
+	<description>repository</description>
 
 	<properties>
 		<java.version>1.8</java.version>
