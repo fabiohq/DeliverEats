@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>co.com.myproject</groupId>
-	<artifactId>delivereats-repository</artifactId>
+	<artifactId>delivereats-persistence</artifactId>
 	<version>1</version>
-	<name>delivereats-repository</name>
+	<name>delivereats-persistence</name>
 	<description>repository</description>
 
 	<properties>
@@ -23,7 +23,10 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
-
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-rest</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
