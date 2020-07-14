@@ -13,42 +13,42 @@ public class PersonaServImpl implements IPersonaServ{
 	@Autowired
 	private IPersonaRepo repo;
 	
-	public List<Persona> findAll() {
+	public List<Persona> findAll()throws Exception {
 		return repo.findAll();
 	}
 	
-	public Optional<Persona> findById(Integer id) {
+	public Optional<Persona> findById(Integer id) throws Exception{
 		return repo.findById(id);
 	}
 	
-	public Persona getOne(Integer id) {
+	public Persona getOne(Integer id) throws Exception{
 		return repo.getOne(id);
 	}
 	
-	public boolean existsById(Integer id) {
+	public boolean existsById(Integer id) throws Exception{
 		return repo.existsById(id);
 	}
 	
-	public Persona save(Persona entity) {
+	public Persona save(Persona entity) throws Exception{
 		return repo.save(entity);
 	}
 	
-	public List<Persona> saveAll(List<Persona> entities) {
+	public List<Persona> saveAll(List<Persona> entities) throws Exception{
 		return repo.saveAll(entities);
 	}
 	
-	public Persona update(Persona entity) {
+	public Persona update(Persona entity) throws Exception{
 		return repo.save(entity);
 	}
 	
-	public List<Persona> updateAll(List<Persona> entities) {
+	public List<Persona> updateAll(List<Persona> entities) throws Exception{
 		return repo.saveAll(entities);
 	}
-	public void delete(Persona entity) {
+	public void delete(Persona entity) throws Exception{
 		repo.delete(entity);
 	}
 	
-	public void deleteAll(List<Persona> entities) {
+	public void deleteAll(List<Persona> entities) throws Exception{
 		repo.deleteAll(entities);
 	}
 }

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package co.com.myproject.delivereatspersistence.entity;
+package co.com.myproject.delivereatspersistence.vo;
 
 import java.io.Serializable;
 import javax.persistence.Basic;
@@ -22,26 +22,26 @@ import javax.validation.constraints.Size;
  * @author fabio
  */
 @Entity
-@Table(name = "tipopersona")
+@Table(name = "formapago")
 @NamedQueries({
-    @NamedQuery(name = "TipopersonaVO.findAll", query = "SELECT t FROM TipopersonaVO t"),
-    @NamedQuery(name = "TipopersonaVO.findByIdtipopersona", query = "SELECT t FROM TipopersonaVO t WHERE t.idtipopersona = :idtipopersona"),
-    @NamedQuery(name = "TipopersonaVO.findByNombre", query = "SELECT t FROM TipopersonaVO t WHERE t.nombre = :nombre"),
-    @NamedQuery(name = "TipopersonaVO.findByObservacion", query = "SELECT t FROM TipopersonaVO t WHERE t.observacion = :observacion"),
-    @NamedQuery(name = "TipopersonaVO.findByFechaini", query = "SELECT t FROM TipopersonaVO t WHERE t.fechaini = :fechaini"),
-    @NamedQuery(name = "TipopersonaVO.findByFechafin", query = "SELECT t FROM TipopersonaVO t WHERE t.fechafin = :fechafin")})
-public class Tipopersona implements Serializable {
+    @NamedQuery(name = "Formapago.findAll", query = "SELECT f FROM Formapago f"),
+    @NamedQuery(name = "Formapago.findByIdformapago", query = "SELECT f FROM Formapago f WHERE f.idformapago = :idformapago"),
+    @NamedQuery(name = "Formapago.findByNombre", query = "SELECT f FROM Formapago f WHERE f.nombre = :nombre"),
+    @NamedQuery(name = "Formapago.findByObservacion", query = "SELECT f FROM Formapago f WHERE f.observacion = :observacion"),
+    @NamedQuery(name = "Formapago.findByFechaini", query = "SELECT f FROM Formapago f WHERE f.fechaini = :fechaini"),
+    @NamedQuery(name = "Formapago.findByFechafin", query = "SELECT f FROM Formapago f WHERE f.fechafin = :fechafin")})
+public class Formapago implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
-    @Column(name = "idtipopersona")
-    private Integer idtipopersona;
-    @Size(max = 20)
+    @Column(name = "idformapago")
+    private Integer idformapago;
+    @Size(max = 200)
     @Column(name = "nombre")
     private String nombre;
-    @Size(max = 100)
+    @Size(max = 200)
     @Column(name = "observacion")
     private String observacion;
     @Size(max = 20)
@@ -51,19 +51,19 @@ public class Tipopersona implements Serializable {
     @Column(name = "fechafin")
     private String fechafin;
 
-    public Tipopersona() {
+    public Formapago() {
     }
 
-    public Tipopersona(Integer idtipopersona) {
-        this.idtipopersona = idtipopersona;
+    public Formapago(Integer idformapago) {
+        this.idformapago = idformapago;
     }
 
-    public Integer getIdtipopersona() {
-        return idtipopersona;
+    public Integer getIdformapago() {
+        return idformapago;
     }
 
-    public void setIdtipopersona(Integer idtipopersona) {
-        this.idtipopersona = idtipopersona;
+    public void setIdformapago(Integer idformapago) {
+        this.idformapago = idformapago;
     }
 
     public String getNombre() {
@@ -101,18 +101,18 @@ public class Tipopersona implements Serializable {
     @Override
     public int hashCode() {
         int hash = 0;
-        hash += (idtipopersona != null ? idtipopersona.hashCode() : 0);
+        hash += (idformapago != null ? idformapago.hashCode() : 0);
         return hash;
     }
 
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Tipopersona)) {
+        if (!(object instanceof Formapago)) {
             return false;
         }
-        Tipopersona other = (Tipopersona) object;
-        if ((this.idtipopersona == null && other.idtipopersona != null) || (this.idtipopersona != null && !this.idtipopersona.equals(other.idtipopersona))) {
+        Formapago other = (Formapago) object;
+        if ((this.idformapago == null && other.idformapago != null) || (this.idformapago != null && !this.idformapago.equals(other.idformapago))) {
             return false;
         }
         return true;
@@ -120,7 +120,7 @@ public class Tipopersona implements Serializable {
 
     @Override
     public String toString() {
-        return "co.com.myproject.delivereatspersistence.entity.Tipopersona[ idtipopersona=" + idtipopersona + " ]";
+        return "co.com.myproject.delivereatspersistence.entity.Formapago[ idformapago=" + idformapago + " ]";
     }
     
 }

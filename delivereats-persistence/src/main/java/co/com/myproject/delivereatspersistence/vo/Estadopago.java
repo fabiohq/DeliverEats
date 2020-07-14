@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package co.com.myproject.delivereatspersistence.entity;
+package co.com.myproject.delivereatspersistence.vo;
 
 import java.io.Serializable;
 import javax.persistence.Basic;
@@ -22,40 +22,40 @@ import javax.validation.constraints.Size;
  * @author fabio
  */
 @Entity
-@Table(name = "estadopersona")
+@Table(name = "estadopago")
 @NamedQueries({
-    @NamedQuery(name = "EstadopersonaVO.findAll", query = "SELECT e FROM EstadopersonaVO e"),
-    @NamedQuery(name = "EstadopersonaVO.findByIdestadopersona", query = "SELECT e FROM EstadopersonaVO e WHERE e.idestadopersona = :idestadopersona"),
-    @NamedQuery(name = "EstadopersonaVO.findByNombre", query = "SELECT e FROM EstadopersonaVO e WHERE e.nombre = :nombre"),
-    @NamedQuery(name = "EstadopersonaVO.findByCodigo", query = "SELECT e FROM EstadopersonaVO e WHERE e.codigo = :codigo")})
-public class Estadopersona implements Serializable {
+    @NamedQuery(name = "Estadopago.findAll", query = "SELECT e FROM Estadopago e"),
+    @NamedQuery(name = "Estadopago.findByIdestadopago", query = "SELECT e FROM Estadopago e WHERE e.idestadopago = :idestadopago"),
+    @NamedQuery(name = "Estadopago.findByNombre", query = "SELECT e FROM Estadopago e WHERE e.nombre = :nombre"),
+    @NamedQuery(name = "Estadopago.findByCodigo", query = "SELECT e FROM Estadopago e WHERE e.codigo = :codigo")})
+public class Estadopago implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
-    @Column(name = "idestadopersona")
-    private Integer idestadopersona;
+    @Column(name = "idestadopago")
+    private Integer idestadopago;
     @Size(max = 20)
     @Column(name = "nombre")
     private String nombre;
-    @Size(max = 5)
+    @Size(max = 20)
     @Column(name = "codigo")
     private String codigo;
 
-    public Estadopersona() {
+    public Estadopago() {
     }
 
-    public Estadopersona(Integer idestadopersona) {
-        this.idestadopersona = idestadopersona;
+    public Estadopago(Integer idestadopago) {
+        this.idestadopago = idestadopago;
     }
 
-    public Integer getIdestadopersona() {
-        return idestadopersona;
+    public Integer getIdestadopago() {
+        return idestadopago;
     }
 
-    public void setIdestadopersona(Integer idestadopersona) {
-        this.idestadopersona = idestadopersona;
+    public void setIdestadopago(Integer idestadopago) {
+        this.idestadopago = idestadopago;
     }
 
     public String getNombre() {
@@ -77,18 +77,18 @@ public class Estadopersona implements Serializable {
     @Override
     public int hashCode() {
         int hash = 0;
-        hash += (idestadopersona != null ? idestadopersona.hashCode() : 0);
+        hash += (idestadopago != null ? idestadopago.hashCode() : 0);
         return hash;
     }
 
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Estadopersona)) {
+        if (!(object instanceof Estadopago)) {
             return false;
         }
-        Estadopersona other = (Estadopersona) object;
-        if ((this.idestadopersona == null && other.idestadopersona != null) || (this.idestadopersona != null && !this.idestadopersona.equals(other.idestadopersona))) {
+        Estadopago other = (Estadopago) object;
+        if ((this.idestadopago == null && other.idestadopago != null) || (this.idestadopago != null && !this.idestadopago.equals(other.idestadopago))) {
             return false;
         }
         return true;
@@ -96,7 +96,7 @@ public class Estadopersona implements Serializable {
 
     @Override
     public String toString() {
-        return "co.com.myproject.delivereatspersistence.entity.Estadopersona[ idestadopersona=" + idestadopersona + " ]";
+        return "co.com.myproject.delivereatspersistence.entity.Estadopago[ idestadopago=" + idestadopago + " ]";
     }
     
 }

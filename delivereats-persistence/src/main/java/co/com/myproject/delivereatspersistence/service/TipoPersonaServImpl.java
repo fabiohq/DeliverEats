@@ -13,42 +13,42 @@ public class TipoPersonaServImpl implements ITipoPersonaServ{
 	@Autowired
 	private ITipoPersonaRepo repo;
 	
-	public List<Tipopersona> findAll() {
+	public List<Tipopersona> findAll() throws Exception{
 		return repo.findAll();
 	}
 	
-	public Optional<Tipopersona> findById(Integer id) {
+	public Optional<Tipopersona> findById(Integer id) throws Exception{
 		return repo.findById(id);
 	}
 	
-	public Tipopersona getOne(Integer id) {
+	public Tipopersona getOne(Integer id) throws Exception{
 		return repo.getOne(id);
 	}
 	
-	public boolean existsById(Integer id) {
+	public boolean existsById(Integer id) throws Exception{
 		return repo.existsById(id);
 	}
 	
-	public Tipopersona save(Tipopersona entity) {
+	public Tipopersona save(Tipopersona entity) throws Exception{
 		return repo.save(entity);
 	}
 	
-	public List<Tipopersona> saveAll(List<Tipopersona> entities) {
+	public List<Tipopersona> saveAll(List<Tipopersona> entities) throws Exception{
 		return repo.saveAll(entities);
 	}
 	
-	public Tipopersona update(Tipopersona entity) {
+	public Tipopersona update(Tipopersona entity) throws Exception{
 		return repo.save(entity);
 	}
 	
-	public List<Tipopersona> updateAll(List<Tipopersona> entities) {
+	public List<Tipopersona> updateAll(List<Tipopersona> entities) throws Exception{
 		return repo.saveAll(entities);
 	}
-	public void delete(Tipopersona entity) {
+	public void delete(Tipopersona entity) throws Exception{
 		repo.delete(entity);
 	}
 	
-	public void deleteAll(List<Tipopersona> entities) {
+	public void deleteAll(List<Tipopersona> entities)throws Exception {
 		repo.deleteAll(entities);
 	}
 }

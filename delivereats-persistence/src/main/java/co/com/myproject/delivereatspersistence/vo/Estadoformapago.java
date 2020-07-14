@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package co.com.myproject.delivereatspersistence.entity;
+package co.com.myproject.delivereatspersistence.vo;
 
 import java.io.Serializable;
 import javax.persistence.Basic;
@@ -22,40 +22,40 @@ import javax.validation.constraints.Size;
  * @author fabio
  */
 @Entity
-@Table(name = "estadopersona")
+@Table(name = "estadoformapago")
 @NamedQueries({
-    @NamedQuery(name = "EstadopersonaVO.findAll", query = "SELECT e FROM EstadopersonaVO e"),
-    @NamedQuery(name = "EstadopersonaVO.findByIdestadopersona", query = "SELECT e FROM EstadopersonaVO e WHERE e.idestadopersona = :idestadopersona"),
-    @NamedQuery(name = "EstadopersonaVO.findByNombre", query = "SELECT e FROM EstadopersonaVO e WHERE e.nombre = :nombre"),
-    @NamedQuery(name = "EstadopersonaVO.findByCodigo", query = "SELECT e FROM EstadopersonaVO e WHERE e.codigo = :codigo")})
-public class Estadopersona implements Serializable {
+    @NamedQuery(name = "Estadoformapago.findAll", query = "SELECT e FROM Estadoformapago e"),
+    @NamedQuery(name = "Estadoformapago.findByIdestadoformapago", query = "SELECT e FROM Estadoformapago e WHERE e.idestadoformapago = :idestadoformapago"),
+    @NamedQuery(name = "Estadoformapago.findByNombre", query = "SELECT e FROM Estadoformapago e WHERE e.nombre = :nombre"),
+    @NamedQuery(name = "Estadoformapago.findByCodigo", query = "SELECT e FROM Estadoformapago e WHERE e.codigo = :codigo")})
+public class Estadoformapago implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
-    @Column(name = "idestadopersona")
-    private Integer idestadopersona;
+    @Column(name = "idestadoformapago")
+    private Integer idestadoformapago;
     @Size(max = 20)
     @Column(name = "nombre")
     private String nombre;
-    @Size(max = 5)
+    @Size(max = 20)
     @Column(name = "codigo")
     private String codigo;
 
-    public Estadopersona() {
+    public Estadoformapago() {
     }
 
-    public Estadopersona(Integer idestadopersona) {
-        this.idestadopersona = idestadopersona;
+    public Estadoformapago(Integer idestadoformapago) {
+        this.idestadoformapago = idestadoformapago;
     }
 
-    public Integer getIdestadopersona() {
-        return idestadopersona;
+    public Integer getIdestadoformapago() {
+        return idestadoformapago;
     }
 
-    public void setIdestadopersona(Integer idestadopersona) {
-        this.idestadopersona = idestadopersona;
+    public void setIdestadoformapago(Integer idestadoformapago) {
+        this.idestadoformapago = idestadoformapago;
     }
 
     public String getNombre() {
@@ -77,18 +77,18 @@ public class Estadopersona implements Serializable {
     @Override
     public int hashCode() {
         int hash = 0;
-        hash += (idestadopersona != null ? idestadopersona.hashCode() : 0);
+        hash += (idestadoformapago != null ? idestadoformapago.hashCode() : 0);
         return hash;
     }
 
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Estadopersona)) {
+        if (!(object instanceof Estadoformapago)) {
             return false;
         }
-        Estadopersona other = (Estadopersona) object;
-        if ((this.idestadopersona == null && other.idestadopersona != null) || (this.idestadopersona != null && !this.idestadopersona.equals(other.idestadopersona))) {
+        Estadoformapago other = (Estadoformapago) object;
+        if ((this.idestadoformapago == null && other.idestadoformapago != null) || (this.idestadoformapago != null && !this.idestadoformapago.equals(other.idestadoformapago))) {
             return false;
         }
         return true;
@@ -96,7 +96,7 @@ public class Estadopersona implements Serializable {
 
     @Override
     public String toString() {
-        return "co.com.myproject.delivereatspersistence.entity.Estadopersona[ idestadopersona=" + idestadopersona + " ]";
+        return "co.com.myproject.delivereatspersistence.entity.Estadoformapago[ idestadoformapago=" + idestadoformapago + " ]";
     }
     
 }

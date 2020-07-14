@@ -3,58 +3,33 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package co.com.myproject.delivereatspersistence.entity;
+package co.com.myproject.delivereatspersistence.vo;
 
 import java.io.Serializable;
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
-import javax.persistence.Table;
-import javax.validation.constraints.Size;
 
 /**
  *
  * @author fabio
  */
-@Entity
-@Table(name = "tipopersona")
-@NamedQueries({
-    @NamedQuery(name = "TipopersonaVO.findAll", query = "SELECT t FROM TipopersonaVO t"),
-    @NamedQuery(name = "TipopersonaVO.findByIdtipopersona", query = "SELECT t FROM TipopersonaVO t WHERE t.idtipopersona = :idtipopersona"),
-    @NamedQuery(name = "TipopersonaVO.findByNombre", query = "SELECT t FROM TipopersonaVO t WHERE t.nombre = :nombre"),
-    @NamedQuery(name = "TipopersonaVO.findByObservacion", query = "SELECT t FROM TipopersonaVO t WHERE t.observacion = :observacion"),
-    @NamedQuery(name = "TipopersonaVO.findByFechaini", query = "SELECT t FROM TipopersonaVO t WHERE t.fechaini = :fechaini"),
-    @NamedQuery(name = "TipopersonaVO.findByFechafin", query = "SELECT t FROM TipopersonaVO t WHERE t.fechafin = :fechafin")})
-public class Tipopersona implements Serializable {
+
+public class TipopersonaVO implements Serializable {
 
     private static final long serialVersionUID = 1L;
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Basic(optional = false)
-    @Column(name = "idtipopersona")
+   
     private Integer idtipopersona;
-    @Size(max = 20)
-    @Column(name = "nombre")
+   
     private String nombre;
-    @Size(max = 100)
-    @Column(name = "observacion")
+   
     private String observacion;
-    @Size(max = 20)
-    @Column(name = "fechaini")
+   
     private String fechaini;
-    @Size(max = 20)
-    @Column(name = "fechafin")
+   
     private String fechafin;
 
-    public Tipopersona() {
+    public TipopersonaVO() {
     }
 
-    public Tipopersona(Integer idtipopersona) {
+    public TipopersonaVO(Integer idtipopersona) {
         this.idtipopersona = idtipopersona;
     }
 
@@ -108,10 +83,10 @@ public class Tipopersona implements Serializable {
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Tipopersona)) {
+        if (!(object instanceof TipopersonaVO)) {
             return false;
         }
-        Tipopersona other = (Tipopersona) object;
+        TipopersonaVO other = (TipopersonaVO) object;
         if ((this.idtipopersona == null && other.idtipopersona != null) || (this.idtipopersona != null && !this.idtipopersona.equals(other.idtipopersona))) {
             return false;
         }

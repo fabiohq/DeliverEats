@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package co.com.myproject.delivereatspersistence.entity;
+package co.com.myproject.delivereatspersistence.vo;
 
 import java.io.Serializable;
 import javax.persistence.Basic;
@@ -22,26 +22,26 @@ import javax.validation.constraints.Size;
  * @author fabio
  */
 @Entity
-@Table(name = "tipopersona")
+@Table(name = "establecimiento")
 @NamedQueries({
-    @NamedQuery(name = "TipopersonaVO.findAll", query = "SELECT t FROM TipopersonaVO t"),
-    @NamedQuery(name = "TipopersonaVO.findByIdtipopersona", query = "SELECT t FROM TipopersonaVO t WHERE t.idtipopersona = :idtipopersona"),
-    @NamedQuery(name = "TipopersonaVO.findByNombre", query = "SELECT t FROM TipopersonaVO t WHERE t.nombre = :nombre"),
-    @NamedQuery(name = "TipopersonaVO.findByObservacion", query = "SELECT t FROM TipopersonaVO t WHERE t.observacion = :observacion"),
-    @NamedQuery(name = "TipopersonaVO.findByFechaini", query = "SELECT t FROM TipopersonaVO t WHERE t.fechaini = :fechaini"),
-    @NamedQuery(name = "TipopersonaVO.findByFechafin", query = "SELECT t FROM TipopersonaVO t WHERE t.fechafin = :fechafin")})
-public class Tipopersona implements Serializable {
+    @NamedQuery(name = "Establecimiento.findAll", query = "SELECT e FROM Establecimiento e"),
+    @NamedQuery(name = "Establecimiento.findByIdestablecimiento", query = "SELECT e FROM Establecimiento e WHERE e.idestablecimiento = :idestablecimiento"),
+    @NamedQuery(name = "Establecimiento.findByNombre", query = "SELECT e FROM Establecimiento e WHERE e.nombre = :nombre"),
+    @NamedQuery(name = "Establecimiento.findByObservacion", query = "SELECT e FROM Establecimiento e WHERE e.observacion = :observacion"),
+    @NamedQuery(name = "Establecimiento.findByFechaini", query = "SELECT e FROM Establecimiento e WHERE e.fechaini = :fechaini"),
+    @NamedQuery(name = "Establecimiento.findByFechafin", query = "SELECT e FROM Establecimiento e WHERE e.fechafin = :fechafin")})
+public class Establecimiento implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
-    @Column(name = "idtipopersona")
-    private Integer idtipopersona;
-    @Size(max = 20)
+    @Column(name = "idestablecimiento")
+    private Integer idestablecimiento;
+    @Size(max = 500)
     @Column(name = "nombre")
     private String nombre;
-    @Size(max = 100)
+    @Size(max = 500)
     @Column(name = "observacion")
     private String observacion;
     @Size(max = 20)
@@ -51,19 +51,19 @@ public class Tipopersona implements Serializable {
     @Column(name = "fechafin")
     private String fechafin;
 
-    public Tipopersona() {
+    public Establecimiento() {
     }
 
-    public Tipopersona(Integer idtipopersona) {
-        this.idtipopersona = idtipopersona;
+    public Establecimiento(Integer idestablecimiento) {
+        this.idestablecimiento = idestablecimiento;
     }
 
-    public Integer getIdtipopersona() {
-        return idtipopersona;
+    public Integer getIdestablecimiento() {
+        return idestablecimiento;
     }
 
-    public void setIdtipopersona(Integer idtipopersona) {
-        this.idtipopersona = idtipopersona;
+    public void setIdestablecimiento(Integer idestablecimiento) {
+        this.idestablecimiento = idestablecimiento;
     }
 
     public String getNombre() {
@@ -101,18 +101,18 @@ public class Tipopersona implements Serializable {
     @Override
     public int hashCode() {
         int hash = 0;
-        hash += (idtipopersona != null ? idtipopersona.hashCode() : 0);
+        hash += (idestablecimiento != null ? idestablecimiento.hashCode() : 0);
         return hash;
     }
 
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Tipopersona)) {
+        if (!(object instanceof Establecimiento)) {
             return false;
         }
-        Tipopersona other = (Tipopersona) object;
-        if ((this.idtipopersona == null && other.idtipopersona != null) || (this.idtipopersona != null && !this.idtipopersona.equals(other.idtipopersona))) {
+        Establecimiento other = (Establecimiento) object;
+        if ((this.idestablecimiento == null && other.idestablecimiento != null) || (this.idestablecimiento != null && !this.idestablecimiento.equals(other.idestablecimiento))) {
             return false;
         }
         return true;
@@ -120,7 +120,7 @@ public class Tipopersona implements Serializable {
 
     @Override
     public String toString() {
-        return "co.com.myproject.delivereatspersistence.entity.Tipopersona[ idtipopersona=" + idtipopersona + " ]";
+        return "co.com.myproject.delivereatspersistence.entity.Establecimiento[ idestablecimiento=" + idestablecimiento + " ]";
     }
     
 }

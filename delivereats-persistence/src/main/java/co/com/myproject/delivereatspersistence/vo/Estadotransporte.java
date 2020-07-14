@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package co.com.myproject.delivereatspersistence.entity;
+package co.com.myproject.delivereatspersistence.vo;
 
 import java.io.Serializable;
 import javax.persistence.Basic;
@@ -22,40 +22,40 @@ import javax.validation.constraints.Size;
  * @author fabio
  */
 @Entity
-@Table(name = "estadopersona")
+@Table(name = "estadotransporte")
 @NamedQueries({
-    @NamedQuery(name = "EstadopersonaVO.findAll", query = "SELECT e FROM EstadopersonaVO e"),
-    @NamedQuery(name = "EstadopersonaVO.findByIdestadopersona", query = "SELECT e FROM EstadopersonaVO e WHERE e.idestadopersona = :idestadopersona"),
-    @NamedQuery(name = "EstadopersonaVO.findByNombre", query = "SELECT e FROM EstadopersonaVO e WHERE e.nombre = :nombre"),
-    @NamedQuery(name = "EstadopersonaVO.findByCodigo", query = "SELECT e FROM EstadopersonaVO e WHERE e.codigo = :codigo")})
-public class Estadopersona implements Serializable {
+    @NamedQuery(name = "Estadotransporte.findAll", query = "SELECT e FROM Estadotransporte e"),
+    @NamedQuery(name = "Estadotransporte.findByIdestadotransporte", query = "SELECT e FROM Estadotransporte e WHERE e.idestadotransporte = :idestadotransporte"),
+    @NamedQuery(name = "Estadotransporte.findByNombre", query = "SELECT e FROM Estadotransporte e WHERE e.nombre = :nombre"),
+    @NamedQuery(name = "Estadotransporte.findByCodigo", query = "SELECT e FROM Estadotransporte e WHERE e.codigo = :codigo")})
+public class Estadotransporte implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
-    @Column(name = "idestadopersona")
-    private Integer idestadopersona;
-    @Size(max = 20)
+    @Column(name = "idestadotransporte")
+    private Integer idestadotransporte;
+    @Size(max = 50)
     @Column(name = "nombre")
     private String nombre;
     @Size(max = 5)
     @Column(name = "codigo")
     private String codigo;
 
-    public Estadopersona() {
+    public Estadotransporte() {
     }
 
-    public Estadopersona(Integer idestadopersona) {
-        this.idestadopersona = idestadopersona;
+    public Estadotransporte(Integer idestadotransporte) {
+        this.idestadotransporte = idestadotransporte;
     }
 
-    public Integer getIdestadopersona() {
-        return idestadopersona;
+    public Integer getIdestadotransporte() {
+        return idestadotransporte;
     }
 
-    public void setIdestadopersona(Integer idestadopersona) {
-        this.idestadopersona = idestadopersona;
+    public void setIdestadotransporte(Integer idestadotransporte) {
+        this.idestadotransporte = idestadotransporte;
     }
 
     public String getNombre() {
@@ -77,18 +77,18 @@ public class Estadopersona implements Serializable {
     @Override
     public int hashCode() {
         int hash = 0;
-        hash += (idestadopersona != null ? idestadopersona.hashCode() : 0);
+        hash += (idestadotransporte != null ? idestadotransporte.hashCode() : 0);
         return hash;
     }
 
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Estadopersona)) {
+        if (!(object instanceof Estadotransporte)) {
             return false;
         }
-        Estadopersona other = (Estadopersona) object;
-        if ((this.idestadopersona == null && other.idestadopersona != null) || (this.idestadopersona != null && !this.idestadopersona.equals(other.idestadopersona))) {
+        Estadotransporte other = (Estadotransporte) object;
+        if ((this.idestadotransporte == null && other.idestadotransporte != null) || (this.idestadotransporte != null && !this.idestadotransporte.equals(other.idestadotransporte))) {
             return false;
         }
         return true;
@@ -96,7 +96,7 @@ public class Estadopersona implements Serializable {
 
     @Override
     public String toString() {
-        return "co.com.myproject.delivereatspersistence.entity.Estadopersona[ idestadopersona=" + idestadopersona + " ]";
+        return "co.com.myproject.delivereatspersistence.entity.Estadotransporte[ idestadotransporte=" + idestadotransporte + " ]";
     }
     
 }

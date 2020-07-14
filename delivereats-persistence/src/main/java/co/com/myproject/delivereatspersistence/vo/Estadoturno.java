@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package co.com.myproject.delivereatspersistence.entity;
+package co.com.myproject.delivereatspersistence.vo;
 
 import java.io.Serializable;
 import javax.persistence.Basic;
@@ -22,20 +22,20 @@ import javax.validation.constraints.Size;
  * @author fabio
  */
 @Entity
-@Table(name = "estadopersona")
+@Table(name = "estadoturno")
 @NamedQueries({
-    @NamedQuery(name = "EstadopersonaVO.findAll", query = "SELECT e FROM EstadopersonaVO e"),
-    @NamedQuery(name = "EstadopersonaVO.findByIdestadopersona", query = "SELECT e FROM EstadopersonaVO e WHERE e.idestadopersona = :idestadopersona"),
-    @NamedQuery(name = "EstadopersonaVO.findByNombre", query = "SELECT e FROM EstadopersonaVO e WHERE e.nombre = :nombre"),
-    @NamedQuery(name = "EstadopersonaVO.findByCodigo", query = "SELECT e FROM EstadopersonaVO e WHERE e.codigo = :codigo")})
-public class Estadopersona implements Serializable {
+    @NamedQuery(name = "Estadoturno.findAll", query = "SELECT e FROM Estadoturno e"),
+    @NamedQuery(name = "Estadoturno.findByIdestadoturno", query = "SELECT e FROM Estadoturno e WHERE e.idestadoturno = :idestadoturno"),
+    @NamedQuery(name = "Estadoturno.findByNombre", query = "SELECT e FROM Estadoturno e WHERE e.nombre = :nombre"),
+    @NamedQuery(name = "Estadoturno.findByCodigo", query = "SELECT e FROM Estadoturno e WHERE e.codigo = :codigo")})
+public class Estadoturno implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
-    @Column(name = "idestadopersona")
-    private Integer idestadopersona;
+    @Column(name = "idestadoturno")
+    private Integer idestadoturno;
     @Size(max = 20)
     @Column(name = "nombre")
     private String nombre;
@@ -43,19 +43,19 @@ public class Estadopersona implements Serializable {
     @Column(name = "codigo")
     private String codigo;
 
-    public Estadopersona() {
+    public Estadoturno() {
     }
 
-    public Estadopersona(Integer idestadopersona) {
-        this.idestadopersona = idestadopersona;
+    public Estadoturno(Integer idestadoturno) {
+        this.idestadoturno = idestadoturno;
     }
 
-    public Integer getIdestadopersona() {
-        return idestadopersona;
+    public Integer getIdestadoturno() {
+        return idestadoturno;
     }
 
-    public void setIdestadopersona(Integer idestadopersona) {
-        this.idestadopersona = idestadopersona;
+    public void setIdestadoturno(Integer idestadoturno) {
+        this.idestadoturno = idestadoturno;
     }
 
     public String getNombre() {
@@ -77,18 +77,18 @@ public class Estadopersona implements Serializable {
     @Override
     public int hashCode() {
         int hash = 0;
-        hash += (idestadopersona != null ? idestadopersona.hashCode() : 0);
+        hash += (idestadoturno != null ? idestadoturno.hashCode() : 0);
         return hash;
     }
 
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Estadopersona)) {
+        if (!(object instanceof Estadoturno)) {
             return false;
         }
-        Estadopersona other = (Estadopersona) object;
-        if ((this.idestadopersona == null && other.idestadopersona != null) || (this.idestadopersona != null && !this.idestadopersona.equals(other.idestadopersona))) {
+        Estadoturno other = (Estadoturno) object;
+        if ((this.idestadoturno == null && other.idestadoturno != null) || (this.idestadoturno != null && !this.idestadoturno.equals(other.idestadoturno))) {
             return false;
         }
         return true;
@@ -96,7 +96,7 @@ public class Estadopersona implements Serializable {
 
     @Override
     public String toString() {
-        return "co.com.myproject.delivereatspersistence.entity.Estadopersona[ idestadopersona=" + idestadopersona + " ]";
+        return "co.com.myproject.delivereatspersistence.entity.Estadoturno[ idestadoturno=" + idestadoturno + " ]";
     }
     
 }

@@ -14,42 +14,42 @@ public class PersonaEstadoTipoServImpl implements IPersonaEstadoTipoServ{
 	@Autowired
 	private IPersonaEstadoTipoRepo repo;
 	
-	public List<Personaestadotipo> findAll() {
+	public List<Personaestadotipo> findAll() throws Exception{
 		return repo.findAll();
 	}
 	
-	public Optional<Personaestadotipo> findById(PersonaestadotipoPK id) {
+	public Optional<Personaestadotipo> findById(PersonaestadotipoPK id) throws Exception{
 		return repo.findById(id);
 	}
 	
-	public Personaestadotipo getOne(PersonaestadotipoPK id) {
+	public Personaestadotipo getOne(PersonaestadotipoPK id) throws Exception{
 		return repo.getOne(id);
 	}
 	
-	public boolean existsById(PersonaestadotipoPK id) {
+	public boolean existsById(PersonaestadotipoPK id) throws Exception{
 		return repo.existsById(id);
 	}
 	
-	public Personaestadotipo save(Personaestadotipo entity) {
+	public Personaestadotipo save(Personaestadotipo entity) throws Exception{
 		return repo.save(entity);
 	}
 	
-	public List<Personaestadotipo> saveAll(List<Personaestadotipo> entities) {
+	public List<Personaestadotipo> saveAll(List<Personaestadotipo> entities) throws Exception{
 		return repo.saveAll(entities);
 	}
 	
-	public Personaestadotipo update(Personaestadotipo entity) {
+	public Personaestadotipo update(Personaestadotipo entity) throws Exception{
 		return repo.save(entity);
 	}
 	
-	public List<Personaestadotipo> updateAll(List<Personaestadotipo> entities) {
+	public List<Personaestadotipo> updateAll(List<Personaestadotipo> entities) throws Exception{
 		return repo.saveAll(entities);
 	}
-	public void delete(Personaestadotipo entity) {
+	public void delete(Personaestadotipo entity) throws Exception{
 		repo.delete(entity);
 	}
 	
-	public void deleteAll(List<Personaestadotipo> entities) {
+	public void deleteAll(List<Personaestadotipo> entities) throws Exception{
 		repo.deleteAll(entities);
 	}
 }

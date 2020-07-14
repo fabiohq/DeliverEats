@@ -13,42 +13,42 @@ public class TipoActorSistemaServImpl implements ITipoActorSistemaServ{
 	@Autowired
 	private ITipoActorSistemaRepo repo;
 	
-	public List<Tipoactorsistema> findAll() {
+	public List<Tipoactorsistema> findAll() throws Exception{
 		return repo.findAll();
 	}
 	
-	public Optional<Tipoactorsistema> findById(Integer id) {
+	public Optional<Tipoactorsistema> findById(Integer id) throws Exception {
 		return repo.findById(id);
 	}
 	
-	public Tipoactorsistema getOne(Integer id) {
+	public Tipoactorsistema getOne(Integer id) throws Exception {
 		return repo.getOne(id);
 	}
 	
-	public boolean existsById(Integer id) {
+	public boolean existsById(Integer id) throws Exception {
 		return repo.existsById(id);
 	}
 	
-	public Tipoactorsistema save(Tipoactorsistema entity) {
+	public Tipoactorsistema save(Tipoactorsistema entity) throws Exception {
 		return repo.save(entity);
 	}
 	
-	public List<Tipoactorsistema> saveAll(List<Tipoactorsistema> entities) {
+	public List<Tipoactorsistema> saveAll(List<Tipoactorsistema> entities) throws Exception {
 		return repo.saveAll(entities);
 	}
 	
-	public Tipoactorsistema update(Tipoactorsistema entity) {
+	public Tipoactorsistema update(Tipoactorsistema entity) throws Exception {
 		return repo.save(entity);
 	}
 	
-	public List<Tipoactorsistema> updateAll(List<Tipoactorsistema> entities) {
+	public List<Tipoactorsistema> updateAll(List<Tipoactorsistema> entities) throws Exception {
 		return repo.saveAll(entities);
 	}
-	public void delete(Tipoactorsistema entity) {
+	public void delete(Tipoactorsistema entity) throws Exception {
 		repo.delete(entity);
 	}
 	
-	public void deleteAll(List<Tipoactorsistema> entities) {
+	public void deleteAll(List<Tipoactorsistema> entities) throws Exception {
 		repo.deleteAll(entities);
 	}
 }
