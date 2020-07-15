@@ -133,9 +133,12 @@ public class PersonaVO implements Serializable {
         this.fechafin = fechafin;
     }
 
-    @Override
-    public String toString() {
-        return "co.com.myproject.delivereatspersistence.entity.Persona[ idpersona=" + idpersona + " ]";
-    }
-    
+	@Override
+	public String toString() {
+		return "PersonaVO [idpersona=" + idpersona + ", nombre1=" + nombre1 + ", nombre2=" + nombre2 + ", apellido1="
+				+ apellido1 + ", apellido2=" + apellido2 + ", observaciones=" + observaciones + ", anionacimiento="
+				+ anionacimiento + ", mesnacimiento=" + mesnacimiento + ", dianacimiento=" + dianacimiento
+				+ ", fechaini=" + fechaini + ", fechafin=" + fechafin + "]";
+	}
+
 }

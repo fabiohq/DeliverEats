@@ -92,11 +92,5 @@ public class Adiciones implements Serializable {
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
-
-
-    @Override
-    public String toString() {
-        return "co.com.myproject.delivereatspersistence.entity.Adiciones[ idadiciones=" + idadiciones + " ]";
-    }
-    
+ 
 }

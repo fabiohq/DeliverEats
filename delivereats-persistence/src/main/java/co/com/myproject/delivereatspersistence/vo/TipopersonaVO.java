@@ -73,29 +73,4 @@ public class TipopersonaVO implements Serializable {
         this.fechafin = fechafin;
     }
 
-    @Override
-    public int hashCode() {
-        int hash = 0;
-        hash += (idtipopersona != null ? idtipopersona.hashCode() : 0);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof TipopersonaVO)) {
-            return false;
-        }
-        TipopersonaVO other = (TipopersonaVO) object;
-        if ((this.idtipopersona == null && other.idtipopersona != null) || (this.idtipopersona != null && !this.idtipopersona.equals(other.idtipopersona))) {
-            return false;
-        }
-        return true;
-    }
-
-    @Override
-    public String toString() {
-        return "co.com.myproject.delivereatspersistence.entity.Tipopersona[ idtipopersona=" + idtipopersona + " ]";
-    }
-    
 }

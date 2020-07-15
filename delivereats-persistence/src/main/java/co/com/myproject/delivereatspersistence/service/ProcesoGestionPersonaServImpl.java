@@ -1,5 +1,6 @@
 package co.com.myproject.delivereatspersistence.service;
 
+import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -9,19 +10,25 @@ import co.com.myproject.delivereatspersistence.entity.Persona;
 import co.com.myproject.delivereatspersistence.entity.Personaestadotipo;
 import co.com.myproject.delivereatspersistence.entity.PersonaestadotipoPK;
 import co.com.myproject.delivereatspersistence.entity.Tipopersona;
+import co.com.myproject.delivereatspersistence.helpers.AbstractUtil;
 import co.com.myproject.delivereatspersistence.vo.EstadopersonaVO;
 import co.com.myproject.delivereatspersistence.vo.PersonaVO;
 import co.com.myproject.delivereatspersistence.vo.TipopersonaVO;
 
 @Service
-public class ProcesoGestionPersonaServImpl implements IProcesoGestionPersonaServ{
+public class ProcesoGestionPersonaServImpl extends AbstractUtil implements IProcesoGestionPersonaServ{
 
-	@Autowired IPersonaServ PersonaServ;
+	private Logger log =util.getLoggger(ProcesoGestionPersonaServImpl.class.getName()); 
+	@Autowired IPersonaServ personaServ;
 	@Autowired ITipoPersonaServ tipoPersonaServ;
 	@Autowired IEstadoPersonaServ estadoPersonaServ;
 	@Autowired IPersonaEstadoTipoServ personaEstadoTipoServ;
 	@Override	
 	public GestionPersonaDTO crear(GestionPersonaDTO request) throws Exception {
+		
+		util.getStringBuilder().append("==> Creando persona\n");
+		util.getStringBuilder().append(request.getPersona());
+		util.pintarLog(log, util.getStringBuilder().toString());
 		
 		PersonaVO personaVO = request.getPersona();
 		Persona persona = new Persona();
@@ -35,7 +42,11 @@ public class ProcesoGestionPersonaServImpl implements IProcesoGestionPersonaServ
 		persona.setNombre1(personaVO.getNombre1());
 		persona.setNombre2(personaVO.getNombre2());
 		persona.setObservaciones(personaVO.getObservaciones());
-		persona=PersonaServ.save(persona);
+		persona=personaServ.save(persona);
+		
+		util.getStringBuilder().append("==> Creando Tipo Persona\n");
+		util.getStringBuilder().append(request.getTipoPersona());
+		util.pintarLog(log, util.getStringBuilder().toString());
 		
 		TipopersonaVO tipoPersonaVO= request.getTipoPersona();
 		Tipopersona tipoPersona = new Tipopersona();
@@ -45,17 +56,21 @@ public class ProcesoGestionPersonaServImpl implements IProcesoGestionPersonaServ
 		tipoPersona.setObservacion(tipoPersonaVO.getObservacion());
 		tipoPersona=tipoPersonaServ.save(tipoPersona);
 		
+		util.getStringBuilder().append("==> Creando Estado Persona\n");
+		util.getStringBuilder().append(request.getEstadoPersona());
+		util.pintarLog(log, util.getStringBuilder().toString());
+		
 		EstadopersonaVO estadoPersonaVO = request.getEstadoPersona();
 		Estadopersona estadoPersona = new Estadopersona();
 		estadoPersona.setCodigo(estadoPersonaVO.getCodigo());
 		estadoPersona.setNombre(estadoPersonaVO.getNombre());
 		estadoPersona=estadoPersonaServ.save(estadoPersona);
-		
-		Personaestadotipo personaEstadoTipo = new Personaestadotipo();
+				
 		PersonaestadotipoPK personaestadotipoPK = new PersonaestadotipoPK();
 		personaestadotipoPK.setIdestadopersona(estadoPersona.getIdestadopersona());
 		personaestadotipoPK.setIdpersona(persona.getIdpersona());
 		personaestadotipoPK.setIdtipopersona(tipoPersona.getIdtipopersona());
+		Personaestadotipo personaEstadoTipo = new Personaestadotipo();
 		personaEstadoTipo.setPersonaestadotipoPK(personaestadotipoPK);
 		personaEstadoTipo=personaEstadoTipoServ.save(personaEstadoTipo);
 		
@@ -66,6 +81,14 @@ public class ProcesoGestionPersonaServImpl implements IProcesoGestionPersonaServ
 		response.setPersona(personaVO);
 		tipoPersonaVO.setIdtipopersona(tipoPersona.getIdtipopersona());
 		response.setTipoPersona(tipoPersonaVO);
+		
+		util.getStringBuilder().append("==> Persona Response\n");
+		util.getStringBuilder().append(response.getPersona());
+		util.getStringBuilder().append("==> Tipo Persona Response\n");
+		util.getStringBuilder().append(response.getTipoPersona());
+		util.getStringBuilder().append("==> Estado Persona Response\n");
+		util.getStringBuilder().append(response.getEstadoPersona());
+		util.pintarLog(log, util.getStringBuilder().toString());
 		
 		return response;
 	}

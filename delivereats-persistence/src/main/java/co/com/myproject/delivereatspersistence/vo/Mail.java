@@ -6,49 +6,24 @@
 package co.com.myproject.delivereatspersistence.vo;
 
 import java.io.Serializable;
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
-import javax.persistence.Table;
-import javax.validation.constraints.Size;
 
 /**
  *
  * @author fabio
  */
-@Entity
-@Table(name = "mail")
-@NamedQueries({
-    @NamedQuery(name = "Mail.findAll", query = "SELECT m FROM Mail m"),
-    @NamedQuery(name = "Mail.findByIdmail", query = "SELECT m FROM Mail m WHERE m.idmail = :idmail"),
-    @NamedQuery(name = "Mail.findByMail", query = "SELECT m FROM Mail m WHERE m.mail = :mail"),
-    @NamedQuery(name = "Mail.findByObservaciones", query = "SELECT m FROM Mail m WHERE m.observaciones = :observaciones"),
-    @NamedQuery(name = "Mail.findByFechaini", query = "SELECT m FROM Mail m WHERE m.fechaini = :fechaini"),
-    @NamedQuery(name = "Mail.findByFechafin", query = "SELECT m FROM Mail m WHERE m.fechafin = :fechafin")})
+
 public class Mail implements Serializable {
 
     private static final long serialVersionUID = 1L;
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Basic(optional = false)
-    @Column(name = "idmail")
+
     private Integer idmail;
-    @Size(max = 500)
-    @Column(name = "mail")
+
     private String mail;
-    @Size(max = 100)
-    @Column(name = "observaciones")
+
     private String observaciones;
-    @Size(max = 20)
-    @Column(name = "fechaini")
+
     private String fechaini;
-    @Size(max = 20)
-    @Column(name = "fechafin")
+
     private String fechafin;
 
     public Mail() {
@@ -96,31 +71,6 @@ public class Mail implements Serializable {
 
     public void setFechafin(String fechafin) {
         this.fechafin = fechafin;
-    }
-
-    @Override
-    public int hashCode() {
-        int hash = 0;
-        hash += (idmail != null ? idmail.hashCode() : 0);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Mail)) {
-            return false;
-        }
-        Mail other = (Mail) object;
-        if ((this.idmail == null && other.idmail != null) || (this.idmail != null && !this.idmail.equals(other.idmail))) {
-            return false;
-        }
-        return true;
-    }
-
-    @Override
-    public String toString() {
-        return "co.com.myproject.delivereatspersistence.entity.Mail[ idmail=" + idmail + " ]";
     }
     
 }
