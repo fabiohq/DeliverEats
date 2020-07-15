@@ -24,18 +24,18 @@ import javax.validation.constraints.Size;
 @Entity
 @Table(name = "persona")
 @NamedQueries({
-    @NamedQuery(name = "PersonaVO.findAll", query = "SELECT p FROM PersonaVO p"),
-    @NamedQuery(name = "PersonaVO.findByIdpersona", query = "SELECT p FROM PersonaVO p WHERE p.idpersona = :idpersona"),
-    @NamedQuery(name = "PersonaVO.findByNombre1", query = "SELECT p FROM PersonaVO p WHERE p.nombre1 = :nombre1"),
-    @NamedQuery(name = "PersonaVO.findByNombre2", query = "SELECT p FROM PersonaVO p WHERE p.nombre2 = :nombre2"),
-    @NamedQuery(name = "PersonaVO.findByApellido1", query = "SELECT p FROM PersonaVO p WHERE p.apellido1 = :apellido1"),
-    @NamedQuery(name = "PersonaVO.findByApellido2", query = "SELECT p FROM PersonaVO p WHERE p.apellido2 = :apellido2"),
-    @NamedQuery(name = "PersonaVO.findByObservaciones", query = "SELECT p FROM PersonaVO p WHERE p.observaciones = :observaciones"),
-    @NamedQuery(name = "PersonaVO.findByAnionacimiento", query = "SELECT p FROM PersonaVO p WHERE p.anionacimiento = :anionacimiento"),
-    @NamedQuery(name = "PersonaVO.findByMesnacimiento", query = "SELECT p FROM PersonaVO p WHERE p.mesnacimiento = :mesnacimiento"),
-    @NamedQuery(name = "PersonaVO.findByDianacimiento", query = "SELECT p FROM PersonaVO p WHERE p.dianacimiento = :dianacimiento"),
-    @NamedQuery(name = "PersonaVO.findByFechaini", query = "SELECT p FROM PersonaVO p WHERE p.fechaini = :fechaini"),
-    @NamedQuery(name = "PersonaVO.findByFechafin", query = "SELECT p FROM PersonaVO p WHERE p.fechafin = :fechafin")})
+    @NamedQuery(name = "Persona.findAll", query = "SELECT p FROM Persona p"),
+    @NamedQuery(name = "Persona.findByIdpersona", query = "SELECT p FROM Persona p WHERE p.idpersona = :idpersona"),
+    @NamedQuery(name = "Persona.findByNombre1", query = "SELECT p FROM Persona p WHERE p.nombre1 = :nombre1"),
+    @NamedQuery(name = "Persona.findByNombre2", query = "SELECT p FROM Persona p WHERE p.nombre2 = :nombre2"),
+    @NamedQuery(name = "Persona.findByApellido1", query = "SELECT p FROM Persona p WHERE p.apellido1 = :apellido1"),
+    @NamedQuery(name = "Persona.findByApellido2", query = "SELECT p FROM Persona p WHERE p.apellido2 = :apellido2"),
+    @NamedQuery(name = "Persona.findByObservaciones", query = "SELECT p FROM Persona p WHERE p.observaciones = :observaciones"),
+    @NamedQuery(name = "Persona.findByAnionacimiento", query = "SELECT p FROM Persona p WHERE p.anionacimiento = :anionacimiento"),
+    @NamedQuery(name = "Persona.findByMesnacimiento", query = "SELECT p FROM Persona p WHERE p.mesnacimiento = :mesnacimiento"),
+    @NamedQuery(name = "Persona.findByDianacimiento", query = "SELECT p FROM Persona p WHERE p.dianacimiento = :dianacimiento"),
+    @NamedQuery(name = "Persona.findByFechaini", query = "SELECT p FROM Persona p WHERE p.fechaini = :fechaini"),
+    @NamedQuery(name = "Persona.findByFechafin", query = "SELECT p FROM Persona p WHERE p.fechafin = :fechafin")})
 public class Persona implements Serializable {
 
     private static final long serialVersionUID = 1L;

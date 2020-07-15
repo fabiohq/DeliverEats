@@ -24,10 +24,10 @@ import javax.validation.constraints.Size;
 @Entity
 @Table(name = "estadopersona")
 @NamedQueries({
-    @NamedQuery(name = "EstadopersonaVO.findAll", query = "SELECT e FROM EstadopersonaVO e"),
-    @NamedQuery(name = "EstadopersonaVO.findByIdestadopersona", query = "SELECT e FROM EstadopersonaVO e WHERE e.idestadopersona = :idestadopersona"),
-    @NamedQuery(name = "EstadopersonaVO.findByNombre", query = "SELECT e FROM EstadopersonaVO e WHERE e.nombre = :nombre"),
-    @NamedQuery(name = "EstadopersonaVO.findByCodigo", query = "SELECT e FROM EstadopersonaVO e WHERE e.codigo = :codigo")})
+    @NamedQuery(name = "Estadopersona.findAll", query = "SELECT e FROM Estadopersona e"),
+    @NamedQuery(name = "Estadopersona.findByIdestadopersona", query = "SELECT e FROM Estadopersona e WHERE e.idestadopersona = :idestadopersona"),
+    @NamedQuery(name = "Estadopersona.findByNombre", query = "SELECT e FROM Estadopersona e WHERE e.nombre = :nombre"),
+    @NamedQuery(name = "Estadopersona.findByCodigo", query = "SELECT e FROM Estadopersona e WHERE e.codigo = :codigo")})
 public class Estadopersona implements Serializable {
 
     private static final long serialVersionUID = 1L;

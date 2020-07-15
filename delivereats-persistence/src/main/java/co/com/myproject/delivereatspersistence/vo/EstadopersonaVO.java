@@ -53,9 +53,10 @@ public class EstadopersonaVO implements Serializable {
         this.codigo = codigo;
     }
 
-    @Override
-    public String toString() {
-        return "co.com.myproject.delivereatspersistence.entity.Estadopersona[ idestadopersona=" + idestadopersona + " ]";
-    }
-    
+	@Override
+	public String toString() {
+		return "EstadopersonaVO [idestadopersona=" + idestadopersona + ", nombre=" + nombre + ", codigo=" + codigo
+				+ "]";
+	}
+
 }

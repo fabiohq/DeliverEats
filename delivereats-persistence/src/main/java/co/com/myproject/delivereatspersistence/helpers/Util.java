@@ -8,7 +8,6 @@ import org.springframework.stereotype.Component;
 public class Util {
 
 	private static StringBuilder SB = new StringBuilder();
-	
 	public Logger getLoggger(String nombreClase) {
 		return LoggerFactory.getLogger(nombreClase);
 	}

@@ -73,4 +73,10 @@ public class TipopersonaVO implements Serializable {
         this.fechafin = fechafin;
     }
 
+	@Override
+	public String toString() {
+		return "TipopersonaVO [idtipopersona=" + idtipopersona + ", nombre=" + nombre + ", observacion=" + observacion
+				+ ", fechaini=" + fechaini + ", fechafin=" + fechafin + "]";
+	}
+
 }

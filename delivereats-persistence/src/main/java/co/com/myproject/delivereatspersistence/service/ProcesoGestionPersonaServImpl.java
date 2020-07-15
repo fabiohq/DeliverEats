@@ -18,7 +18,7 @@ import co.com.myproject.delivereatspersistence.vo.TipopersonaVO;
 @Service
 public class ProcesoGestionPersonaServImpl extends AbstractUtil implements IProcesoGestionPersonaServ{
 
-	private Logger log =util.getLoggger(ProcesoGestionPersonaServImpl.class.getName()); 
+	private Logger log;
 	@Autowired IPersonaServ personaServ;
 	@Autowired ITipoPersonaServ tipoPersonaServ;
 	@Autowired IEstadoPersonaServ estadoPersonaServ;
@@ -26,9 +26,12 @@ public class ProcesoGestionPersonaServImpl extends AbstractUtil implements IProc
 	@Override	
 	public GestionPersonaDTO crear(GestionPersonaDTO request) throws Exception {
 		
-		util.getStringBuilder().append("==> Creando persona\n");
-		util.getStringBuilder().append(request.getPersona());
-		util.pintarLog(log, util.getStringBuilder().toString());
+		log =util.getLoggger(ProcesoGestionPersonaServImpl.class.getName()); 
+		util.getStringBuilder().setLength(0);
+		util.getStringBuilder().append("\n==> Creando persona\n");
+		util.getStringBuilder().append(request.getPersona()); 
+		util.pintarLog(log,util.getStringBuilder().toString());
+		 
 		
 		PersonaVO personaVO = request.getPersona();
 		Persona persona = new Persona();
@@ -44,7 +47,8 @@ public class ProcesoGestionPersonaServImpl extends AbstractUtil implements IProc
 		persona.setObservaciones(personaVO.getObservaciones());
 		persona=personaServ.save(persona);
 		
-		util.getStringBuilder().append("==> Creando Tipo Persona\n");
+		util.getStringBuilder().setLength(0);
+		util.getStringBuilder().append("\n==> Creando Tipo Persona\n");
 		util.getStringBuilder().append(request.getTipoPersona());
 		util.pintarLog(log, util.getStringBuilder().toString());
 		
@@ -56,7 +60,8 @@ public class ProcesoGestionPersonaServImpl extends AbstractUtil implements IProc
 		tipoPersona.setObservacion(tipoPersonaVO.getObservacion());
 		tipoPersona=tipoPersonaServ.save(tipoPersona);
 		
-		util.getStringBuilder().append("==> Creando Estado Persona\n");
+		util.getStringBuilder().setLength(0);
+		util.getStringBuilder().append("\n==> Creando Estado Persona\n");
 		util.getStringBuilder().append(request.getEstadoPersona());
 		util.pintarLog(log, util.getStringBuilder().toString());
 		
@@ -82,11 +87,13 @@ public class ProcesoGestionPersonaServImpl extends AbstractUtil implements IProc
 		tipoPersonaVO.setIdtipopersona(tipoPersona.getIdtipopersona());
 		response.setTipoPersona(tipoPersonaVO);
 		
-		util.getStringBuilder().append("==> Persona Response\n");
+		util.getStringBuilder().setLength(0);
+		util.getStringBuilder().append("==> Fin gestion Persona CREAR Parametro response\n");
+		util.getStringBuilder().append("==> Persona\n");
 		util.getStringBuilder().append(response.getPersona());
-		util.getStringBuilder().append("==> Tipo Persona Response\n");
+		util.getStringBuilder().append("\n==> Tipo Persona Response\n");
 		util.getStringBuilder().append(response.getTipoPersona());
-		util.getStringBuilder().append("==> Estado Persona Response\n");
+		util.getStringBuilder().append("\n==> Estado Persona Response\n");
 		util.getStringBuilder().append(response.getEstadoPersona());
 		util.pintarLog(log, util.getStringBuilder().toString());
 		

@@ -24,12 +24,12 @@ import javax.validation.constraints.Size;
 @Entity
 @Table(name = "tipopersona")
 @NamedQueries({
-    @NamedQuery(name = "TipopersonaVO.findAll", query = "SELECT t FROM TipopersonaVO t"),
-    @NamedQuery(name = "TipopersonaVO.findByIdtipopersona", query = "SELECT t FROM TipopersonaVO t WHERE t.idtipopersona = :idtipopersona"),
-    @NamedQuery(name = "TipopersonaVO.findByNombre", query = "SELECT t FROM TipopersonaVO t WHERE t.nombre = :nombre"),
-    @NamedQuery(name = "TipopersonaVO.findByObservacion", query = "SELECT t FROM TipopersonaVO t WHERE t.observacion = :observacion"),
-    @NamedQuery(name = "TipopersonaVO.findByFechaini", query = "SELECT t FROM TipopersonaVO t WHERE t.fechaini = :fechaini"),
-    @NamedQuery(name = "TipopersonaVO.findByFechafin", query = "SELECT t FROM TipopersonaVO t WHERE t.fechafin = :fechafin")})
+    @NamedQuery(name = "Tipopersona.findAll", query = "SELECT t FROM Tipopersona t"),
+    @NamedQuery(name = "Tipopersona.findByIdtipopersona", query = "SELECT t FROM Tipopersona t WHERE t.idtipopersona = :idtipopersona"),
+    @NamedQuery(name = "Tipopersona.findByNombre", query = "SELECT t FROM Tipopersona t WHERE t.nombre = :nombre"),
+    @NamedQuery(name = "Tipopersona.findByObservacion", query = "SELECT t FROM Tipopersona t WHERE t.observacion = :observacion"),
+    @NamedQuery(name = "Tipopersona.findByFechaini", query = "SELECT t FROM Tipopersona t WHERE t.fechaini = :fechaini"),
+    @NamedQuery(name = "Tipopersona.findByFechafin", query = "SELECT t FROM Tipopersona t WHERE t.fechafin = :fechafin")})
 public class Tipopersona implements Serializable {
 
     private static final long serialVersionUID = 1L;

@@ -6,6 +6,6 @@ import co.com.myproject.delivereatspersistence.helpers.AbstractUtil;
 
 @Component
 public abstract class AbstractConroller extends AbstractUtil{
-
+	
 	
 }
