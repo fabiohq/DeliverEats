@@ -1,7 +1,6 @@
 package co.com.myproject.delivereatspersistence.service;
 
 import org.slf4j.Logger;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import co.com.myproject.delivereatspersistence.dto.GestionPersonaDTO;
@@ -10,23 +9,17 @@ import co.com.myproject.delivereatspersistence.entity.Persona;
 import co.com.myproject.delivereatspersistence.entity.Personaestadotipo;
 import co.com.myproject.delivereatspersistence.entity.PersonaestadotipoPK;
 import co.com.myproject.delivereatspersistence.entity.Tipopersona;
-import co.com.myproject.delivereatspersistence.helpers.AbstractUtil;
 import co.com.myproject.delivereatspersistence.vo.EstadopersonaVO;
 import co.com.myproject.delivereatspersistence.vo.PersonaVO;
 import co.com.myproject.delivereatspersistence.vo.TipopersonaVO;
 
 @Service
-public class ProcesoGestionPersonaServImpl extends AbstractUtil implements IProcesoGestionPersonaServ{
+public class ProcesoGestionPersonaServImpl extends AbstractProcesoServ implements IProcesoGestionPersonaServ{
 
-	private Logger log;
-	@Autowired IPersonaServ personaServ;
-	@Autowired ITipoPersonaServ tipoPersonaServ;
-	@Autowired IEstadoPersonaServ estadoPersonaServ;
-	@Autowired IPersonaEstadoTipoServ personaEstadoTipoServ;
 	@Override	
 	public GestionPersonaDTO crear(GestionPersonaDTO request) throws Exception {
 		
-		log =util.getLoggger(ProcesoGestionPersonaServImpl.class.getName()); 
+		Logger log =util.getLoggger(ProcesoGestionPersonaServImpl.class.getName()); 
 		util.getStringBuilder().setLength(0);
 		util.getStringBuilder().append("\n==> Creando persona\n");
 		util.getStringBuilder().append(request.getPersona()); 

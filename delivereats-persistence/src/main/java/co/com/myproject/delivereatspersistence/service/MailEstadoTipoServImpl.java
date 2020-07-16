@@ -52,4 +52,16 @@ public class MailEstadoTipoServImpl implements IMailEstadoTipoServ{
 	public void deleteAll(List<Mailestadotipo> entities) {
 		repo.deleteAll(entities);
 	}
+
+	@Override
+	public Mailestadotipo getOne(Integer id) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean existsById(Integer id) throws Exception {
+		// TODO Auto-generated method stub
+		return false;
+	}
 }

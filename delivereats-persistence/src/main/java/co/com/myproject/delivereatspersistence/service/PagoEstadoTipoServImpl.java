@@ -52,4 +52,16 @@ public class PagoEstadoTipoServImpl implements IPagoEstadoTipoServ{
 	public void deleteAll(List<Pagoestadotipo> entities) {
 		repo.deleteAll(entities);
 	}
+
+	@Override
+	public Pagoestadotipo getOne(Integer id) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean existsById(Integer id) throws Exception {
+		// TODO Auto-generated method stub
+		return false;
+	}
 }

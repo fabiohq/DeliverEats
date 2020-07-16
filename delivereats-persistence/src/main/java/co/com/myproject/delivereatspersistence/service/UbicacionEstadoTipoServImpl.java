@@ -52,4 +52,5 @@ public class UbicacionEstadoTipoServImpl implements IUbicacionEstadoTipoServ{
 	public void deleteAll(List<Ubicacionestadotipo> entities) {
 		repo.deleteAll(entities);
 	}
+
 }

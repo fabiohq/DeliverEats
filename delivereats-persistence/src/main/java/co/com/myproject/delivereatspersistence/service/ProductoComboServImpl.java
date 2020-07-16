@@ -52,4 +52,16 @@ public class ProductoComboServImpl implements IProductoComboServ{
 	public void deleteAll(List<Productocombo> entities) {
 		repo.deleteAll(entities);
 	}
+
+	@Override
+	public Productocombo getOne(Integer id) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean existsById(Integer id) throws Exception {
+		// TODO Auto-generated method stub
+		return false;
+	}
 }

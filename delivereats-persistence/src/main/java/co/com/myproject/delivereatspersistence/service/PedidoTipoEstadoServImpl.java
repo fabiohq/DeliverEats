@@ -52,4 +52,16 @@ public class PedidoTipoEstadoServImpl implements IPedidoTipoEstadoServ{
 	public void deleteAll(List<Pedidotipoestado> entities) {
 		repo.deleteAll(entities);
 	}
+
+	@Override
+	public Pedidotipoestado getOne(Integer id) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean existsById(Integer id) throws Exception {
+		// TODO Auto-generated method stub
+		return false;
+	}
 }

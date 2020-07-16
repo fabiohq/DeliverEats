@@ -19,16 +19,18 @@ public class ActorsistemaestadotipoServiceImpl implements IActorsistemaestadotip
 	public List<Actorsistemaestadotipo> findAll() {
 		return repo.findAll();
 	}
-	
-	public Optional<Actorsistemaestadotipo> findById(ActorsistemaestadotipoPK id) {
+
+	@Override
+	public Optional<Actorsistemaestadotipo> findById(ActorsistemaestadotipoPK id) throws Exception {
 		return repo.findById(id);
 	}
-	
-	public Actorsistemaestadotipo getOne(ActorsistemaestadotipoPK id) {
+	@Override
+	public Actorsistemaestadotipo getOne(ActorsistemaestadotipoPK id) throws Exception {
 		return repo.getOne(id);
 	}
-	
-	public boolean existsById(ActorsistemaestadotipoPK id) {
+
+	@Override
+	public boolean existsById(ActorsistemaestadotipoPK id) throws Exception {
 		return repo.existsById(id);
 	}
 	
@@ -54,5 +56,4 @@ public class ActorsistemaestadotipoServiceImpl implements IActorsistemaestadotip
 	public void deleteAll(List<Actorsistemaestadotipo> entities) {
 		repo.deleteAll(entities);
 	}
-	
 }

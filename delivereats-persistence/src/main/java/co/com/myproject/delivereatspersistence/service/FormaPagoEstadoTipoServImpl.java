@@ -22,15 +22,7 @@ public class FormaPagoEstadoTipoServImpl implements IFormaPagoEstadoTipoServ {
 	public Optional<Formapagoestadotipo> findById(FormapagoestadotipoPK id) {
 		return repo.findById(id);
 	}
-	
-	public Formapagoestadotipo getOne(FormapagoestadotipoPK id) {
-		return repo.getOne(id);
-	}
-	
-	public boolean existsById(FormapagoestadotipoPK id) {
-		return repo.existsById(id);
-	}
-	
+		
 	public Formapagoestadotipo save(Formapagoestadotipo entity) {
 		return repo.save(entity);
 	}
@@ -52,5 +44,17 @@ public class FormaPagoEstadoTipoServImpl implements IFormaPagoEstadoTipoServ {
 	
 	public void deleteAll(List<Formapagoestadotipo> entities) {
 		repo.deleteAll(entities);
+	}
+
+	@Override
+	public Formapagoestadotipo getOne(FormapagoestadotipoPK id) throws Exception {
+		
+		return repo.getOne(id);
+	}
+
+	@Override
+	public boolean existsById(FormapagoestadotipoPK id) throws Exception {
+
+		return repo.existsById(id);
 	}
 }

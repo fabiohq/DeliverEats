@@ -5,51 +5,53 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import co.com.myproject.delivereatspersistence.entity.Producto;
+import co.com.myproject.delivereatspersistence.entity.ProductoPK;
 import co.com.myproject.delivereatspersistence.entity.Productoadiciones;
 import co.com.myproject.delivereatspersistence.entity.ProductoadicionesPK;
-import co.com.myproject.delivereatspersistence.repository.IProductosAdicionesRepo;
+import co.com.myproject.delivereatspersistence.repository.IProductoRepo;
 
 @Service
 public class ProductoServImpl implements IProductoServ{
 	@Autowired
-	private IProductosAdicionesRepo repo;
+	private IProductoRepo repo;
 	
-	public List<Productoadiciones> findAll() {
+	public List<Producto> findAll() {
 		return repo.findAll();
 	}
 	
-	public Optional<Productoadiciones> findById(ProductoadicionesPK id) {
+	public Optional<Producto> findById(ProductoPK id) {
 		return repo.findById(id);
 	}
 	
-	public Productoadiciones getOne(ProductoadicionesPK id) {
+	public Producto getOne(ProductoPK id) {
 		return repo.getOne(id);
 	}
 	
-	public boolean existsById(ProductoadicionesPK id) {
+	public boolean existsById(ProductoPK id) {
 		return repo.existsById(id);
 	}
 	
-	public Productoadiciones save(Productoadiciones entity) {
+	public Producto save(Producto entity) {
 		return repo.save(entity);
 	}
 	
-	public List<Productoadiciones> saveAll(List<Productoadiciones> entities) {
+	public List<Producto> saveAll(List<Producto> entities) {
 		return repo.saveAll(entities);
 	}
 	
-	public Productoadiciones update(Productoadiciones entity) {
+	public Producto update(Producto entity) {
 		return repo.save(entity);
 	}
 	
-	public List<Productoadiciones> updateAll(List<Productoadiciones> entities) {
+	public List<Producto> updateAll(List<Producto> entities) {
 		return repo.saveAll(entities);
 	}
-	public void delete(Productoadiciones entity) {
+	public void delete(Producto entity) {
 		repo.delete(entity);
 	}
 	
-	public void deleteAll(List<Productoadiciones> entities) {
+	public void deleteAll(List<Producto> entities) {
 		repo.deleteAll(entities);
 	}
 }

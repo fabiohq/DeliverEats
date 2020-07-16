@@ -1,55 +1,57 @@
 package co.com.myproject.delivereatspersistence.service;
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Example;
 import org.springframework.stereotype.Service;
 
-import co.com.myproject.delivereatspersistence.entity.Producto;
-import co.com.myproject.delivereatspersistence.entity.ProductoPK;
-import co.com.myproject.delivereatspersistence.repository.IProductoRepo;
+import co.com.myproject.delivereatspersistence.entity.Productoadiciones;
+import co.com.myproject.delivereatspersistence.entity.ProductoadicionesPK;
+import co.com.myproject.delivereatspersistence.repository.IProductosAdicionesRepo;
 
 @Service
 public class ProductosAdicionesServImpl implements IProductosAdicionesServ{
 	@Autowired
-	private IProductoRepo repo;
-	
-	public List<Producto> findAll() {
-		return repo.findAll();
-	}
-	
-	public Optional<Producto> findById(ProductoPK id) {
-		return repo.findById(id);
-	}
-	
-	public Producto getOne(ProductoPK id) {
+	private IProductosAdicionesRepo repo;
+
+	@Override
+	public Productoadiciones getOne(ProductoadicionesPK id) throws Exception {
 		return repo.getOne(id);
 	}
-	
-	public boolean existsById(ProductoPK id) {
-		return repo.existsById(id);
-	}
-	
-	public Producto save(Producto entity) {
+
+	@Override
+	public Productoadiciones save(Productoadiciones entity) throws Exception {
 		return repo.save(entity);
 	}
-	
-	public List<Producto> saveAll(List<Producto> entities) {
+
+	@Override
+	public List<Productoadiciones> saveAll(List<Productoadiciones> entities) throws Exception {
 		return repo.saveAll(entities);
 	}
-	
-	public Producto update(Producto entity) {
+
+	@Override
+	public Productoadiciones update(Productoadiciones entity) throws Exception {
 		return repo.save(entity);
 	}
-	
-	public List<Producto> updateAll(List<Producto> entities) {
+
+	@Override
+	public List<Productoadiciones> updateAll(List<Productoadiciones> entities) throws Exception {
 		return repo.saveAll(entities);
 	}
-	public void delete(Producto entity) {
+
+	@Override
+	public void delete(Productoadiciones entity) throws Exception {
 		repo.delete(entity);
+		
 	}
-	
-	public void deleteAll(List<Producto> entities) {
+
+	@Override
+	public void deleteAll(List<Productoadiciones> entities) throws Exception {
 		repo.deleteAll(entities);
+		
 	}
+
+	
+
+	
 }
