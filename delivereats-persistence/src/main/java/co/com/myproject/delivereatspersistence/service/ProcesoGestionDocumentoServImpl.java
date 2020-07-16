@@ -61,14 +61,11 @@ public class ProcesoGestionDocumentoServImpl extends AbstractProcesoServ impleme
 		documentoEstadoTipo.setDocumentoestadotipoPK(documentoestadotipoPK);
 		documentoEstadoTipo= documentoEstadoTipoServ.save(documentoEstadoTipo);
 		
-		documentoVO.setIddocumento(documento.getIddocumento());
-		tipoDocumentoVO.setIdtipodocumento(tipoDocumento.getIdtipodocumento());
-		estadoDocumentoVO.setIdestadodocumento(estadoDocumento.getIdestadodocumento());
-		GestionDocumentoDTO response = new GestionDocumentoDTO();
-		response.setDocumento(documentoVO);
-		response.setEstadoDocumento(estadoDocumentoVO);
-		response.setTipodocumento(tipoDocumentoVO);
-		
+		GestionDocumentoDTO response = request;
+		response.getDocumento().setIddocumento(documento.getIddocumento());
+		response.getEstadoDocumento().setIdestadodocumento(estadoDocumento.getIdestadodocumento());
+		response.getTipodocumento().setIdtipodocumento(tipoDocumento.getIdtipodocumento());
+
 		util.getStringBuilder().setLength(0);
 		util.getStringBuilder().append("==> Fin gestion Documento CREAR Parametro response\n");
 		util.getStringBuilder().append("==> Documento Response\n");

@@ -52,5 +52,11 @@ public class TipomailVO implements Serializable {
     public void setObservacion(String observacion) {
         this.observacion = observacion;
     }
+
+	@Override
+	public String toString() {
+		return "TipomailVO [idtipomail=" + idtipomail + ", nombre=" + nombre + ", observacion=" + observacion + "]";
+	}
+    
     
 }

@@ -72,5 +72,11 @@ public class MailVO implements Serializable {
     public void setFechafin(String fechafin) {
         this.fechafin = fechafin;
     }
+
+	@Override
+	public String toString() {
+		return "MailVO [idmail=" + idmail + ", mail=" + mail + ", observaciones=" + observaciones + ", fechaini="
+				+ fechaini + ", fechafin=" + fechafin + "]";
+	}
     
 }

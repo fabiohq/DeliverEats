@@ -52,5 +52,10 @@ public class TiporolVO implements Serializable {
     public void setObservacion(String observacion) {
         this.observacion = observacion;
     }
+
+	@Override
+	public String toString() {
+		return "TiporolVO [idtiporol=" + idtiporol + ", nombre=" + nombre + ", observacion=" + observacion + "]";
+	}
     
 }

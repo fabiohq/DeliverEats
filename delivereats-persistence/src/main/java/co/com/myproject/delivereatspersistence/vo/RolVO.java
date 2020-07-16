@@ -72,5 +72,11 @@ public class RolVO implements Serializable {
     public void setFechafin(String fechafin) {
         this.fechafin = fechafin;
     }
+
+	@Override
+	public String toString() {
+		return "RolVO [idrol=" + idrol + ", nombre=" + nombre + ", obsservacion=" + obsservacion + ", fechaini="
+				+ fechaini + ", fechafin=" + fechafin + "]";
+	}
     
 }

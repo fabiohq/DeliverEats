@@ -1,5 +1,7 @@
 package co.com.myproject.delivereatspersistence.service;
 
+import org.slf4j.Logger;
+
 import co.com.myproject.delivereatspersistence.dto.GestionTelefonoDTO;
 import co.com.myproject.delivereatspersistence.entity.Estadotelefono;
 import co.com.myproject.delivereatspersistence.entity.Telefono;
@@ -15,6 +17,12 @@ public class ProcesoGestionTelefonoServImpl extends AbstractProcesoServ implemen
 	@Override
 	public GestionTelefonoDTO crear(GestionTelefonoDTO request) throws Exception {
 		
+		Logger log =util.getLoggger(ProcesoGestionTelefonoServImpl.class.getName()); 
+		util.getStringBuilder().setLength(0);
+		util.getStringBuilder().append("\n==> Creando Telefono\n");
+		util.getStringBuilder().append(request.getTelefono()); 
+		util.pintarLog(log,util.getStringBuilder().toString());
+		
 		TelefonoVO telefonoVO = request.getTelefono();
 		Telefono telefono = new Telefono();
 		telefono.setFechaini(telefonoVO.getFechaini());
@@ -23,11 +31,21 @@ public class ProcesoGestionTelefonoServImpl extends AbstractProcesoServ implemen
 		telefono.setObservacion(telefonoVO.getObservacion());
 		telefono=telefonoServ.save(telefono);
 		
+		util.getStringBuilder().setLength(0);
+		util.getStringBuilder().append("\n==> Creando Tipo Telefono\n");
+		util.getStringBuilder().append(request.getTipoTelefono());
+		util.pintarLog(log, util.getStringBuilder().toString());
+		
 		TipotelefonoVO tipoTelefonoVO = request.getTipoTelefono();
 		Tipotelefono tipoTelefono = new Tipotelefono();
 		tipoTelefono.setNombre(tipoTelefonoVO.getNombre());
 		tipoTelefono.setObservacion(tipoTelefonoVO.getObservacion());
 		tipoTelefono=tipoTelefonoServ.save(tipoTelefono);
+		
+		util.getStringBuilder().setLength(0);
+		util.getStringBuilder().append("\n==> Creando Estado Telefono\n");
+		util.getStringBuilder().append(request.getEstadoTelefono());
+		util.pintarLog(log, util.getStringBuilder().toString());
 		
 		EstadotelefonoVO estadoTelefonoVO = request.getEstadoTelefono();
 		Estadotelefono estadoTelefono = new Estadotelefono();
@@ -43,13 +61,20 @@ public class ProcesoGestionTelefonoServImpl extends AbstractProcesoServ implemen
 		telefonoEstadoTipo.setTelefonoestadotipoPK(telefonoestadotipoPK);
 		telefonoEstadoTipo =telefonoEstadoTipoServ.save(telefonoEstadoTipo);
 		
-		telefonoVO.setIdtelefono(telefono.getIdtelefono());
-		tipoTelefonoVO.setIdtipotelefono(tipoTelefono.getIdtipotelefono());
-		estadoTelefonoVO.setIdestadotelefono(estadoTelefono.getIdestadotelefono());
-		GestionTelefonoDTO response = new GestionTelefonoDTO();
-		response.setEstadoTelefono(estadoTelefonoVO);
-		response.setTelefono(telefonoVO);
-		response.setTipoTelefono(tipoTelefonoVO);
+		GestionTelefonoDTO response = request;
+		response.getEstadoTelefono().setIdestadotelefono(estadoTelefono.getIdestadotelefono());
+		response.getTelefono().setIdtelefono(telefono.getIdtelefono());
+		response.getTipoTelefono().setIdtipotelefono(tipoTelefono.getIdtipotelefono());
+
+		util.getStringBuilder().setLength(0);
+		util.getStringBuilder().append("==> Fin gestion Telefono CREAR Parametro response\n");
+		util.getStringBuilder().append("==> Telefono Response\n");
+		util.getStringBuilder().append(response.getTelefono());
+		util.getStringBuilder().append("\n==> Tipo Telefono Response\n");
+		util.getStringBuilder().append(response.getTipoTelefono());
+		util.getStringBuilder().append("\n==> Estado Telefono Response\n");
+		util.getStringBuilder().append(response.getEstadoTelefono());
+		util.pintarLog(log, util.getStringBuilder().toString());
 		
 		return response;
 	}

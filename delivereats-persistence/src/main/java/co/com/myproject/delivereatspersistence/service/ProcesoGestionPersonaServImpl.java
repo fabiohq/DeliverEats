@@ -73,12 +73,9 @@ public class ProcesoGestionPersonaServImpl extends AbstractProcesoServ implement
 		personaEstadoTipo=personaEstadoTipoServ.save(personaEstadoTipo);
 		
 		GestionPersonaDTO response = request;
-		estadoPersonaVO.setIdestadopersona(estadoPersona.getIdestadopersona());
-		response.setEstadoPersona(estadoPersonaVO);
-		personaVO.setIdpersona(persona.getIdpersona());
-		response.setPersona(personaVO);
-		tipoPersonaVO.setIdtipopersona(tipoPersona.getIdtipopersona());
-		response.setTipoPersona(tipoPersonaVO);
+		response.getEstadoPersona().setIdestadopersona(estadoPersona.getIdestadopersona());
+		response.getPersona().setIdpersona(persona.getIdpersona());
+		response.getTipoPersona().setIdtipopersona(tipoPersona.getIdtipopersona());
 		
 		util.getStringBuilder().setLength(0);
 		util.getStringBuilder().append("==> Fin gestion Persona CREAR Parametro response\n");

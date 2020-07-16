@@ -21,4 +21,14 @@ public abstract class AbstractProcesoServ extends AbstractUtil{
 	@Autowired protected IEstadoTelefonoServ estadoTelefonoServ;
 	@Autowired protected ITelefonoEstadoTipoServ telefonoEstadoTipoServ;
 	
+	@Autowired protected IMailServ mailServ;
+	@Autowired protected ITipoMailServ tipoMailServ;
+	@Autowired protected IEstadoMailServ estadoMailServ;
+	@Autowired protected IMailEstadoTipoServ mailEstadoTipoServ;
+	
+	@Autowired protected IRolServ rolServ;
+	@Autowired protected ITipoRolServ tipoRolServ;
+	@Autowired protected IEstadoRolServ estadoRolServ;
+	@Autowired protected IRolEstadoTipoServ rolEstadoTipoServ;
+	
 }

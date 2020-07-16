@@ -52,5 +52,11 @@ public class TipodocumentoVO implements Serializable {
     public void setObservacion(String observacion) {
         this.observacion = observacion;
     }
+
+	@Override
+	public String toString() {
+		return "TipodocumentoVO [idtipodocumento=" + idtipodocumento + ", nombre=" + nombre + ", observacion="
+				+ observacion + "]";
+	}
     
 }
