@@ -52,5 +52,10 @@ public class PagoVO implements Serializable {
     public void setValor(Integer valor) {
         this.valor = valor;
     }
+
+	@Override
+	public String toString() {
+		return "PagoVO [idpago=" + idpago + ", fecha=" + fecha + ", valor=" + valor + "]";
+	}
     
 }

@@ -52,5 +52,11 @@ public class TipotarjetaVO implements Serializable {
     public void setObservacion(String observacion) {
         this.observacion = observacion;
     }
+
+	@Override
+	public String toString() {
+		return "TipotarjetaVO [idtipotarjeta=" + idtipotarjeta + ", nombre=" + nombre + ", observacion=" + observacion
+				+ "]";
+	}
     
 }

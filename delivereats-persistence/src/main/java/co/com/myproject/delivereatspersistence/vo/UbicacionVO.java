@@ -82,5 +82,11 @@ public class UbicacionVO implements Serializable {
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
+
+	@Override
+	public String toString() {
+		return "UbicacionVO [idubicacion=" + idubicacion + ", latitud=" + latitud + ", longitud=" + longitud
+				+ ", codpostal=" + codpostal + ", nombre=" + nombre + ", descripcion=" + descripcion + "]";
+	}
     
 }

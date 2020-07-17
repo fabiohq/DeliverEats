@@ -92,5 +92,12 @@ public class TarjetaVO implements Serializable {
     public void setNombreusuario(String nombreusuario) {
         this.nombreusuario = nombreusuario;
     }
+
+	@Override
+	public String toString() {
+		return "TarjetaVO [idtarjeta=" + idtarjeta + ", franquicia=" + franquicia + ", numero=" + numero
+				+ ", codseguridad=" + codseguridad + ", anio=" + anio + ", mes=" + mes + ", nombreusuario="
+				+ nombreusuario + "]";
+	}
     
 }

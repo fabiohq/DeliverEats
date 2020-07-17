@@ -31,4 +31,9 @@ public abstract class AbstractProcesoServ extends AbstractUtil{
 	@Autowired protected IEstadoRolServ estadoRolServ;
 	@Autowired protected IRolEstadoTipoServ rolEstadoTipoServ;
 	
+	@Autowired protected IUbicacionServ ubicacionServ;
+	@Autowired protected ITipoUbicacionServ tipoUbicacionServ;
+	@Autowired protected IEstadoUbicacionServ estadoUbicacionServ;
+	@Autowired protected IUbicacionEstadoTipoServ ubicacionEstadoTipoServ;
+	
 }

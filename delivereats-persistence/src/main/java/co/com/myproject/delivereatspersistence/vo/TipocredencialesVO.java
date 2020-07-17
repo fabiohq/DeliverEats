@@ -52,5 +52,11 @@ public class TipocredencialesVO implements Serializable {
     public void setCodigo(String codigo) {
         this.codigo = codigo;
     }
+
+	@Override
+	public String toString() {
+		return "TipocredencialesVO [idtipocredenciales=" + idtipocredenciales + ", nombre=" + nombre + ", codigo="
+				+ codigo + "]";
+	}
     
 }

@@ -62,5 +62,11 @@ public class TipoactorsistemaVO implements Serializable {
     public void setObservaacion(String observaacion) {
         this.observaacion = observaacion;
     }
+
+	@Override
+	public String toString() {
+		return "TipoactorsistemaVO [idtipoactorsistema=" + idtipoactorsistema + ", nombre=" + nombre + ", codigo="
+				+ codigo + ", observaacion=" + observaacion + "]";
+	}
     
 }

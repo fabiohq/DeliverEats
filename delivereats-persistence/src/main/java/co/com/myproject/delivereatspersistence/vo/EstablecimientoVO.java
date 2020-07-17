@@ -72,5 +72,11 @@ public class EstablecimientoVO implements Serializable {
     public void setFechafin(String fechafin) {
         this.fechafin = fechafin;
     }
+
+	@Override
+	public String toString() {
+		return "EstablecimientoVO [idestablecimiento=" + idestablecimiento + ", nombre=" + nombre + ", observacion="
+				+ observacion + ", fechaini=" + fechaini + ", fechafin=" + fechafin + "]";
+	}
     
 }

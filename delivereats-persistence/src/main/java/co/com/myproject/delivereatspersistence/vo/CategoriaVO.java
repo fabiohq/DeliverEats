@@ -73,4 +73,10 @@ public class CategoriaVO implements Serializable {
         this.fechafin = fechafin;
     }
 
+	@Override
+	public String toString() {
+		return "CategoriaVO [idcategoria=" + idcategoria + ", nombre=" + nombre + ", observacion=" + observacion
+				+ ", fechaini=" + fechaini + ", fechafin=" + fechafin + "]";
+	}
+
 }

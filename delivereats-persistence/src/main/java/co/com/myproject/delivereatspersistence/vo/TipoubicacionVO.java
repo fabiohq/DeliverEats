@@ -52,5 +52,11 @@ public class TipoubicacionVO implements Serializable {
     public void setObservaacion(String observaacion) {
         this.observaacion = observaacion;
     }
+
+	@Override
+	public String toString() {
+		return "TipoubicacionVO [idtipoubicacion=" + idtipoubicacion + ", nombre=" + nombre + ", observaacion="
+				+ observaacion + "]";
+	}
     
 }

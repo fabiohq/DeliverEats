@@ -52,5 +52,11 @@ public class EstadocredencialesVO implements Serializable {
     public void setCodigo(String codigo) {
         this.codigo = codigo;
     }
+
+	@Override
+	public String toString() {
+		return "EstadocredencialesVO [idestadocredenciales=" + idestadocredenciales + ", nombre=" + nombre + ", codigo="
+				+ codigo + "]";
+	}
     
 }

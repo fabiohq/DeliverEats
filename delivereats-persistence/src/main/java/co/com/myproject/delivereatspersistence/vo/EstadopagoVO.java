@@ -52,5 +52,10 @@ public class EstadopagoVO implements Serializable {
     public void setCodigo(String codigo) {
         this.codigo = codigo;
     }
+
+	@Override
+	public String toString() {
+		return "EstadopagoVO [idestadopago=" + idestadopago + ", nombre=" + nombre + ", codigo=" + codigo + "]";
+	}
     
 }

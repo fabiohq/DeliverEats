@@ -72,5 +72,11 @@ public class CredencialesVO implements Serializable {
     public void setFechafin(String fechafin) {
         this.fechafin = fechafin;
     }
+
+	@Override
+	public String toString() {
+		return "CredencialesVO [idcredenciales=" + idcredenciales + ", usuario=" + usuario + ", clave=" + clave
+				+ ", fechaini=" + fechaini + ", fechafin=" + fechafin + "]";
+	}
     
 }

@@ -92,5 +92,11 @@ public class TransporteVO implements Serializable {
     public void setSeguro(String seguro) {
         this.seguro = seguro;
     }
+
+	@Override
+	public String toString() {
+		return "TransporteVO [idtransporte=" + idtransporte + ", nombre=" + nombre + ", observacion=" + observacion
+				+ ", fechaini=" + fechaini + ", fechafin=" + fechafin + ", placa=" + placa + ", seguro=" + seguro + "]";
+	}
     
 }

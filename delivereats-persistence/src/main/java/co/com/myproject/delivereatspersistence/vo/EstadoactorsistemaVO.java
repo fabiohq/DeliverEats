@@ -52,5 +52,11 @@ public class EstadoactorsistemaVO implements Serializable {
     public void setCodgo(String codgo) {
         this.codgo = codgo;
     }
+
+	@Override
+	public String toString() {
+		return "EstadoactorsistemaVO [idestadoactorsistema=" + idestadoactorsistema + ", nombre=" + nombre + ", codgo="
+				+ codgo + "]";
+	}
     
 }

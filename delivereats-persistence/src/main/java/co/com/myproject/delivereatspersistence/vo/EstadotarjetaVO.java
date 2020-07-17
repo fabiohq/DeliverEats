@@ -52,5 +52,11 @@ public class EstadotarjetaVO implements Serializable {
     public void setCodigo(String codigo) {
         this.codigo = codigo;
     }
+
+	@Override
+	public String toString() {
+		return "EstadotarjetaVO [idestadotrajeta=" + idestadotrajeta + ", nombre=" + nombre + ", codigo=" + codigo
+				+ "]";
+	}
     
 }

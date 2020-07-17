@@ -72,5 +72,11 @@ public class TurnoVO implements Serializable {
     public void setFechafin(String fechafin) {
         this.fechafin = fechafin;
     }
+
+	@Override
+	public String toString() {
+		return "TurnoVO [idturno=" + idturno + ", nombre=" + nombre + ", observaciones=" + observaciones + ", fechaini="
+				+ fechaini + ", fechafin=" + fechafin + "]";
+	}
     
 }
