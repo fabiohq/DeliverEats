@@ -6,6 +6,12 @@ import co.com.myproject.delivereatspersistence.entity.Credenciales;
 
 public interface ICredencialesServ {
 
+	public Credenciales getOne(Integer id) throws Exception;
+	
+	public boolean existsById(Integer id) throws Exception;
+	
+	public Credenciales save(Credenciales entity) throws Exception;
+	
 	public List<Credenciales> saveAll(List<Credenciales> entities) throws Exception;
 	
 	public Credenciales update(Credenciales entity) throws Exception;
