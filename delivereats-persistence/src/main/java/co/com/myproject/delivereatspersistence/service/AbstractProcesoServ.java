@@ -46,4 +46,24 @@ public abstract class AbstractProcesoServ extends AbstractUtil{
 	@Autowired protected IEstadoTransporteServ estadoTransporteServ;
 	@Autowired protected ITransporteEstadoTipoServ transporteEstadoTipoServ;
 	
+	@Autowired protected ITurnoServ turnoServ;	
+	@Autowired protected IEstadoTurnoServ estadoTurnoServ;
+	@Autowired protected ITurnoEstadoServ turnoEstadoServ;
+	
+	@Autowired protected IPagoServ pagoServ;
+	@Autowired protected ITipoPagoServ tipoPagoServ;
+	@Autowired protected IEstadoPagoServ estadoPagoServ;
+	@Autowired protected IPagoEstadoTipoServ pagoEstadoTipoServ;
+	
+	@Autowired protected ICategoriaServ categoriaServ;
+	@Autowired protected ITipoCategoriaServ tipoCategoriaServ;
+	@Autowired protected IEstadoCategoriaServ estadoCategoriaServ;
+	@Autowired protected ICategoriaEstadotipoServ categoriaEstadoTipoServ;
+	
+	@Autowired protected IEstablecimientoServ establecimientoServ;
+	@Autowired protected ITipoEstablecimientoServ tipoEstablecimientoServ;
+	@Autowired protected IEstadoEstablecimientoServ estadoEstablecimientoServ;
+	@Autowired protected IEstablecimientoEstadoTipoServ establecimientoEstadoTipoServ;
+	@Autowired protected IEspecialidadServ especialidadServ;
+	
 }

@@ -17,7 +17,7 @@ public class ProcesoGestionTransporteServImpl extends AbstractProcesoServ implem
 	@Override
 	public GestionTransporteDTO crear(GestionTransporteDTO request) throws Exception {
 		
-		Logger log =util.getLoggger(ProcesoGestionDocumentoServImpl.class.getName()); 
+		Logger log =util.getLoggger(ProcesoGestionTransporteServImpl.class.getName()); 
 		util.getStringBuilder().setLength(0);
 		util.getStringBuilder().append("\n==> Transporte Documento\n");
 		util.getStringBuilder().append(request.getTransporte()); 

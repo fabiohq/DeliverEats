@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import co.com.myproject.delivereatspersistence.entity.Categoria;
+import co.com.myproject.delivereatspersistence.entity.CategoriaestadotipoPK;
 import co.com.myproject.delivereatspersistence.repository.ICategoriaRepo;
 
 @Service
@@ -18,15 +19,15 @@ public class CategoriaServImpl implements ICategoriaServ {
 		return repo.findAll();
 	}
 	
-	public Optional<Categoria> findById(Integer id) {
+	public Optional<Categoria> findById(CategoriaestadotipoPK id) {
 		return repo.findById(id);
 	}
 	
-	public Categoria getOne(Integer id) {
+	public Categoria getOne(CategoriaestadotipoPK id) {
 		return repo.getOne(id);
 	}
 	
-	public boolean existsById(Integer id) {
+	public boolean existsById(CategoriaestadotipoPK id) {
 		return repo.existsById(id);
 	}
 	
