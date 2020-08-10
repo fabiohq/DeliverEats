@@ -16,6 +16,8 @@ public class ProductoVO implements Serializable {
 
     private static final long serialVersionUID = 1L;
     
+    private int idproducto;
+    
     private int idcategoria;
     
     private int idtipocategoria;
@@ -38,7 +40,17 @@ public class ProductoVO implements Serializable {
     }
 
     
-    public int getIdcategoria() {
+    public int getIdproducto() {
+		return idproducto;
+	}
+
+
+	public void setIdproducto(int idproducto) {
+		this.idproducto = idproducto;
+	}
+
+
+	public int getIdcategoria() {
         return idcategoria;
     }
 

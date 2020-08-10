@@ -12,18 +12,15 @@ import java.io.Serializable;
  * @author fabio
  */
 
-public class Productocombo implements Serializable {
+public class ProductoadicionesVO implements Serializable {
 
     private static final long serialVersionUID = 1L;
-
+    
     private Integer idestadoproducto;
-
+    
     private Integer idtipoproducto;
-
+    
     private Integer idproducto;
-
-    public Productocombo() {
-    }
 
     public Integer getIdestadoproducto() {
         return idestadoproducto;

@@ -66,4 +66,35 @@ public abstract class AbstractProcesoServ extends AbstractUtil{
 	@Autowired protected IEstablecimientoEstadoTipoServ establecimientoEstadoTipoServ;
 	@Autowired protected IEspecialidadServ especialidadServ;
 	
+	@Autowired protected IActorSistemaServ actorSistemaServ;
+	@Autowired protected ITipoActorSistemaServ tipoActorSistemaServ;
+	@Autowired protected IEstadoActorSistemaServ estadoActorSistemaServ;
+	@Autowired protected IActorsistemaestadotipoServ actorSistemaEstadoTipoServ;
+	
+	//Faltan
+	@Autowired protected IPedidoServ pedidoServ;
+	@Autowired protected ITipoPedidoServ tipoPedidoServ;
+	@Autowired protected IEstadoPedidoServ estadoPedidoServ;
+	@Autowired protected IPedidoTipoEstadoServ pedidoTipoEsadoServ;
+	
+	@Autowired protected IFormaPagoServ formaPagoServ;
+	@Autowired protected ITipoFormaPagoServ tipoFormaPagoServ;
+	@Autowired protected IEstadoFormaPagoServ estadoFormaPagoServ;
+	@Autowired protected IFormaPagoEstadoTipoServ formaPagoEstadoTipoServ;
+	
+	@Autowired protected ITarjetaServ tarjetaServ;
+	@Autowired protected ITipoTarjetaServ tipoTarjetaServ;
+	@Autowired protected IEstadoTarjetaServ estadoTarjetaServ;
+	@Autowired protected ITarjetaEstadoTipoServ tarjetaEstadoTipoServ;
+	
+	@Autowired protected IProcesoPersonaServ procesoPersonaServ;
+	
+	@Autowired protected IProductoServ productoServ;
+	@Autowired protected ITipoProductoServ tipoProductoServ;
+	@Autowired protected IEstadoProductoServ estadoProductoServ;	
+	@Autowired protected IAdicionesServ adicionesServ;
+	@Autowired protected IComboServ comboServ;
+	@Autowired protected IProductosAdicionesServ productosAdicionesServ;
+	@Autowired protected IProductoComboServ productoComboServ;
+	
 }

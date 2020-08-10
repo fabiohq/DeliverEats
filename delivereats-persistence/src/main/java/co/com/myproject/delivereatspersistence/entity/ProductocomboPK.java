@@ -21,7 +21,7 @@ public class ProductocomboPK implements Serializable {
 
     @Basic(optional = false)
     @Column(name = "idproductocombo")
-    private int idproductocombo;
+    private Integer idproductocombo;
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 20)

@@ -217,9 +217,15 @@ public class Pedidotipoestado implements Serializable {
         return true;
     }
 
-    @Override
-    public String toString() {
-        return "co.com.myproject.delivereatspersistence.entity.Pedidotipoestado[ pedidotipoestadoPK=" + pedidotipoestadoPK + " ]";
-    }
+	@Override
+	public String toString() {
+		return "Pedidotipoestado [pedidotipoestadoPK=" + pedidotipoestadoPK + ", idestadoproducto=" + idestadoproducto
+				+ ", idtipoproducto=" + idtipoproducto + ", idproducto=" + idproducto + ", idcombo=" + idcombo
+				+ ", idproductocombo=" + idproductocombo + ", idadiciones=" + idadiciones + ", idproductoadiciones="
+				+ idproductoadiciones + ", idestadoactorsistema=" + idestadoactorsistema + ", idtipoactorsistema="
+				+ idtipoactorsistema + ", idactorsistema=" + idactorsistema + ", idestadopago=" + idestadopago
+				+ ", idtipopago=" + idtipopago + ", idpago=" + idpago + "]";
+	}
+
     
 }

@@ -6,7 +6,7 @@ import java.util.Optional;
 import co.com.myproject.delivereatspersistence.entity.Actorsistemaestadotipo;
 import co.com.myproject.delivereatspersistence.entity.ActorsistemaestadotipoPK;
 
-public interface IActorsistemaestadotipoService {
+public interface IActorsistemaestadotipoServ {
 
 public Optional<Actorsistemaestadotipo> findById(ActorsistemaestadotipoPK id) throws Exception;
 	

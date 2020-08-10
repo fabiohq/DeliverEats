@@ -19,7 +19,7 @@ public class ProcesoGestionTransporteServImpl extends AbstractProcesoServ implem
 		
 		Logger log =util.getLoggger(ProcesoGestionTransporteServImpl.class.getName()); 
 		util.getStringBuilder().setLength(0);
-		util.getStringBuilder().append("\n==> Transporte Documento\n");
+		util.getStringBuilder().append("\n==> Creando Transporte\n");
 		util.getStringBuilder().append(request.getTransporte()); 
 		util.pintarLog(log,util.getStringBuilder().toString());
 		

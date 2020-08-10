@@ -12,17 +12,30 @@ import java.io.Serializable;
  * @author fabio
  */
 
-public class Productoadiciones implements Serializable {
+public class ProductocomboVO implements Serializable {
 
     private static final long serialVersionUID = 1L;
     
+    private Integer idproductocombo;
+    
     private Integer idestadoproducto;
-    
+
     private Integer idtipoproducto;
-    
+
     private Integer idproducto;
 
-    public Integer getIdestadoproducto() {
+    public ProductocomboVO() {
+    }
+
+    public Integer getIdproductocombo() {
+		return idproductocombo;
+	}
+
+	public void setIdproductocombo(Integer idproductocombo) {
+		this.idproductocombo = idproductocombo;
+	}
+
+	public Integer getIdestadoproducto() {
         return idestadoproducto;
     }
 

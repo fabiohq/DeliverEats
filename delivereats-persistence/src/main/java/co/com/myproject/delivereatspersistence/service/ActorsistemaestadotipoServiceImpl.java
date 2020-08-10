@@ -11,7 +11,7 @@ import co.com.myproject.delivereatspersistence.entity.ActorsistemaestadotipoPK;
 import co.com.myproject.delivereatspersistence.repository.IActorsistemaestadotipoRepo;
 
 @Service
-public class ActorsistemaestadotipoServiceImpl implements IActorsistemaestadotipoService{
+public class ActorsistemaestadotipoServiceImpl implements IActorsistemaestadotipoServ{
 
 	@Autowired
 	private IActorsistemaestadotipoRepo repo;
