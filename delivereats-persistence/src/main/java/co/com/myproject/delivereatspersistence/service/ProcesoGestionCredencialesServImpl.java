@@ -7,9 +7,11 @@ import co.com.myproject.delivereatspersistence.entity.Credenciales;
 import co.com.myproject.delivereatspersistence.entity.Credencialesestadotipo;
 import co.com.myproject.delivereatspersistence.entity.CredencialesestadotipoPK;
 import co.com.myproject.delivereatspersistence.entity.Estadocredenciales;
+import co.com.myproject.delivereatspersistence.entity.Procesopersona;
 import co.com.myproject.delivereatspersistence.entity.Tipocredenciales;
 import co.com.myproject.delivereatspersistence.vo.CredencialesVO;
 import co.com.myproject.delivereatspersistence.vo.EstadocredencialesVO;
+import co.com.myproject.delivereatspersistence.vo.ProcesopersonaVO;
 import co.com.myproject.delivereatspersistence.vo.TipocredencialesVO;
 
 public class ProcesoGestionCredencialesServImpl extends AbstractProcesoServ implements IProcesoGestionCredencialesServ{
@@ -61,10 +63,26 @@ public class ProcesoGestionCredencialesServImpl extends AbstractProcesoServ impl
 		credencialesEstadoTipo.setCredencialesestadotipoPK(credencialesestadotipoPK);
 		credencialesEstadoTipo=credencialesEstadoTipoServ.save(credencialesEstadoTipo);
 		
+		ProcesopersonaVO procesoPersonaVO = request.getProcesoPersona();
+		procesoPersonaVO.setIdcredenciales(credenciales.getIdcredenciales());
+		procesoPersonaVO.setIdestadocredenciales(estadocredenciales.getIdestadocredenciales());
+		procesoPersonaVO.setIdtipocredenciales(tipoCredenciales.getIdtipocredenciales());
+		
+		Procesopersona procesoPersona = new Procesopersona();
+		procesoPersona.setIdcredenciales(procesoPersonaVO.getIdcredenciales());		
+		procesoPersona.setIdestadocredenciales(procesoPersonaVO.getIdestadocredenciales());
+		procesoPersona.setIdtipocredenciales(procesoPersonaVO.getIdtipocredenciales());		
+		procesoPersona.setIdtransporte(procesoPersonaVO.getIdtransporte());
+		procesoPersona.setIdestadotransporte(procesoPersonaVO.getIdestadotransporte());		
+		procesoPersona.setIdtipotransporte(procesoPersonaVO.getIdtipotransporte());
+		
+		procesoPersona = procesoPersonaServ.save(procesoPersona);
+		
 		GestionCredencialesDTO response = request;
 		response.getCredenciales().setIdcredenciales(credenciales.getIdcredenciales());
 		response.getEstadoCredenciales().setIdestadocredenciales(estadocredenciales.getIdestadocredenciales());
 		response.getTipoCredenciales().setIdtipocredenciales(tipoCredenciales.getIdtipocredenciales());
+		response.getProcesoPersona().setIdprocesopersona(procesoPersona.getIdprocesopersona());
 		
 		util.getStringBuilder().setLength(0);
 		util.getStringBuilder().append("==> Fin gestion Credenciales CREAR Parametro response\n");
@@ -74,6 +92,8 @@ public class ProcesoGestionCredencialesServImpl extends AbstractProcesoServ impl
 		util.getStringBuilder().append(response.getTipoCredenciales());
 		util.getStringBuilder().append("\n==> Estado Credenciales Response\n");
 		util.getStringBuilder().append(response.getEstadoCredenciales());
+		util.getStringBuilder().append("\n==> Proceso Persona Response\n");
+		util.getStringBuilder().append(response.getProcesoPersona());
 		util.pintarLog(log, util.getStringBuilder().toString());
 		
 		return response;

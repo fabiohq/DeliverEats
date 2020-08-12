@@ -4,7 +4,11 @@ import java.io.Serializable;
 
 import co.com.myproject.delivereatspersistence.vo.CredencialesVO;
 import co.com.myproject.delivereatspersistence.vo.EstadocredencialesVO;
+import co.com.myproject.delivereatspersistence.vo.EstadotransporteVO;
+import co.com.myproject.delivereatspersistence.vo.ProcesopersonaVO;
 import co.com.myproject.delivereatspersistence.vo.TipocredencialesVO;
+import co.com.myproject.delivereatspersistence.vo.TipotransporteVO;
+import co.com.myproject.delivereatspersistence.vo.TransporteVO;
 
 public class GestionCredencialesDTO implements Serializable{
 
@@ -12,7 +16,8 @@ public class GestionCredencialesDTO implements Serializable{
 	private CredencialesVO credenciales;
 	private TipocredencialesVO tipoCredenciales;
 	private EstadocredencialesVO estadoCredenciales;
-	
+	private ProcesopersonaVO procesoPersona;
+		
 	public CredencialesVO getCredenciales() {
 		return credenciales;
 	}
@@ -31,4 +36,10 @@ public class GestionCredencialesDTO implements Serializable{
 	public void setEstadoCredenciales(EstadocredencialesVO estadoCredenciales) {
 		this.estadoCredenciales = estadoCredenciales;
 	}
+	public ProcesopersonaVO getProcesoPersona() {
+		return procesoPersona;
+	}
+	public void setProcesoPersona(ProcesopersonaVO procesoPersona) {
+		this.procesoPersona = procesoPersona;
+	}	
 }

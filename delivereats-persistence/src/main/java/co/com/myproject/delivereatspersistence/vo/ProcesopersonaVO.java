@@ -92,5 +92,13 @@ public class ProcesopersonaVO implements Serializable {
     public void setIdtransporte(Integer idtransporte) {
         this.idtransporte = idtransporte;
     }
+
+	@Override
+	public String toString() {
+		return "ProcesopersonaVO [idprocesopersona=" + idprocesopersona + ", idtipocredenciales=" + idtipocredenciales
+				+ ", idestadocredenciales=" + idestadocredenciales + ", idcredenciales=" + idcredenciales
+				+ ", idestadotransporte=" + idestadotransporte + ", idtipotransporte=" + idtipotransporte
+				+ ", idtransporte=" + idtransporte + "]";
+	}
     
 }
