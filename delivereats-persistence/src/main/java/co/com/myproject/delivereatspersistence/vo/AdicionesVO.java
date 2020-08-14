@@ -17,25 +17,18 @@ public class AdicionesVO implements Serializable {
     private static final long serialVersionUID = 1L;
    
     private Integer idadiciones;
-   
+    
     private Integer idestadoproducto;
-   
+
     private Integer idtipoproducto;
-   
+
     private Integer idproducto;
-       
+          
     private String nombre;
     
     private String adiciones;
     
     private String descripcion;
-
-    public AdicionesVO() {
-    }
-
-    public AdicionesVO(Integer idadiciones) {
-        this.idadiciones = idadiciones;
-    }
 
     public Integer getIdadiciones() {
         return idadiciones;
@@ -46,30 +39,30 @@ public class AdicionesVO implements Serializable {
     }
 
     public Integer getIdestadoproducto() {
-        return idestadoproducto;
-    }
+		return idestadoproducto;
+	}
 
-    public void setIdestadoproducto(Integer idestadoproducto) {
-        this.idestadoproducto = idestadoproducto;
-    }
+	public void setIdestadoproducto(Integer idestadoproducto) {
+		this.idestadoproducto = idestadoproducto;
+	}
 
-    public Integer getIdtipoproducto() {
-        return idtipoproducto;
-    }
+	public Integer getIdtipoproducto() {
+		return idtipoproducto;
+	}
 
-    public void setIdtipoproducto(Integer idtipoproducto) {
-        this.idtipoproducto = idtipoproducto;
-    }
+	public void setIdtipoproducto(Integer idtipoproducto) {
+		this.idtipoproducto = idtipoproducto;
+	}
 
-    public Integer getIdproducto() {
-        return idproducto;
-    }
+	public Integer getIdproducto() {
+		return idproducto;
+	}
 
-    public void setIdproducto(Integer idproducto) {
-        this.idproducto = idproducto;
-    }
+	public void setIdproducto(Integer idproducto) {
+		this.idproducto = idproducto;
+	}
 
-    public String getNombre() {
+	public String getNombre() {
         return nombre;
     }
 

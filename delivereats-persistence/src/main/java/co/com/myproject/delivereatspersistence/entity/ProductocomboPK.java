@@ -26,29 +26,29 @@ public class ProductocomboPK implements Serializable {
     @NotNull
     @Size(min = 1, max = 20)
     @Column(name = "idcombo")
-    private String idcombo;
+    private Integer idcombo;
 
     public ProductocomboPK() {
     }
 
-    public ProductocomboPK(int idproductocombo, String idcombo) {
+    public ProductocomboPK(Integer idproductocombo, Integer idcombo) {
         this.idproductocombo = idproductocombo;
         this.idcombo = idcombo;
     }
 
-    public int getIdproductocombo() {
+    public Integer getIdproductocombo() {
         return idproductocombo;
     }
 
-    public void setIdproductocombo(int idproductocombo) {
+    public void setIdproductocombo(Integer idproductocombo) {
         this.idproductocombo = idproductocombo;
     }
 
-    public String getIdcombo() {
+    public Integer getIdcombo() {
         return idcombo;
     }
 
-    public void setIdcombo(String idcombo) {
+    public void setIdcombo(Integer idcombo) {
         this.idcombo = idcombo;
     }
 

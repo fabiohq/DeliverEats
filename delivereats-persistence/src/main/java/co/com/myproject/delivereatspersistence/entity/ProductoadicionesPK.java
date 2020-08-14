@@ -21,17 +21,17 @@ public class ProductoadicionesPK implements Serializable {
 
     @Basic(optional = false)
     @Column(name = "idproductoadiciones")
-    private int idproductoadiciones;
+    private Integer idproductoadiciones;
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 20)
     @Column(name = "idadiciones")
-    private String idadiciones;
+    private Integer idadiciones;
 
     public ProductoadicionesPK() {
     }
 
-    public ProductoadicionesPK(int idproductoadiciones, String idadiciones) {
+    public ProductoadicionesPK(Integer idproductoadiciones, Integer idadiciones) {
         this.idproductoadiciones = idproductoadiciones;
         this.idadiciones = idadiciones;
     }
@@ -40,22 +40,22 @@ public class ProductoadicionesPK implements Serializable {
         return idproductoadiciones;
     }
 
-    public void setIdproductoadiciones(int idproductoadiciones) {
+    public void setIdproductoadiciones(Integer idproductoadiciones) {
         this.idproductoadiciones = idproductoadiciones;
     }
 
-    public String getIdadiciones() {
+    public Integer getIdadiciones() {
         return idadiciones;
     }
 
-    public void setIdadiciones(String idadiciones) {
+    public void setIdadiciones(Integer idadiciones) {
         this.idadiciones = idadiciones;
     }
 
     @Override
     public int hashCode() {
         int hash = 0;
-        hash += (int) idproductoadiciones;
+        hash += (Integer) idproductoadiciones;
         hash += (idadiciones != null ? idadiciones.hashCode() : 0);
         return hash;
     }

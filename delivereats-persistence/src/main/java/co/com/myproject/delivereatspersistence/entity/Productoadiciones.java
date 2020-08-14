@@ -31,13 +31,7 @@ public class Productoadiciones implements Serializable {
     private static final long serialVersionUID = 1L;
     @EmbeddedId
     protected ProductoadicionesPK productoadicionesPK;
-    @Column(name = "idestadoproducto")
-    private Integer idestadoproducto;
-    @Column(name = "idtipoproducto")
-    private Integer idtipoproducto;
-    @Column(name = "idproducto")
-    private Integer idproducto;
-
+    
     public Productoadiciones() {
     }
 
@@ -45,7 +39,7 @@ public class Productoadiciones implements Serializable {
         this.productoadicionesPK = productoadicionesPK;
     }
 
-    public Productoadiciones(int idproductoadiciones, String idadiciones) {
+    public Productoadiciones(Integer idproductoadiciones, Integer idadiciones) {
         this.productoadicionesPK = new ProductoadicionesPK(idproductoadiciones, idadiciones);
     }
 
@@ -57,30 +51,7 @@ public class Productoadiciones implements Serializable {
         this.productoadicionesPK = productoadicionesPK;
     }
 
-    public Integer getIdestadoproducto() {
-        return idestadoproducto;
-    }
-
-    public void setIdestadoproducto(Integer idestadoproducto) {
-        this.idestadoproducto = idestadoproducto;
-    }
-
-    public Integer getIdtipoproducto() {
-        return idtipoproducto;
-    }
-
-    public void setIdtipoproducto(Integer idtipoproducto) {
-        this.idtipoproducto = idtipoproducto;
-    }
-
-    public Integer getIdproducto() {
-        return idproducto;
-    }
-
-    public void setIdproducto(Integer idproducto) {
-        this.idproducto = idproducto;
-    }
-
+    
     @Override
     public int hashCode() {
         int hash = 0;

@@ -31,13 +31,7 @@ public class Productocombo implements Serializable {
     private static final long serialVersionUID = 1L;
     @EmbeddedId
     protected ProductocomboPK productocomboPK;
-    @Column(name = "idestadoproducto")
-    private Integer idestadoproducto;
-    @Column(name = "idtipoproducto")
-    private Integer idtipoproducto;
-    @Column(name = "idproducto")
-    private Integer idproducto;
-
+    
     public Productocombo() {
     }
 
@@ -45,7 +39,7 @@ public class Productocombo implements Serializable {
         this.productocomboPK = productocomboPK;
     }
 
-    public Productocombo(int idproductocombo, String idcombo) {
+    public Productocombo(Integer idproductocombo, Integer idcombo) {
         this.productocomboPK = new ProductocomboPK(idproductocombo, idcombo);
     }
 
@@ -56,31 +50,7 @@ public class Productocombo implements Serializable {
     public void setProductocomboPK(ProductocomboPK productocomboPK) {
         this.productocomboPK = productocomboPK;
     }
-
-    public Integer getIdestadoproducto() {
-        return idestadoproducto;
-    }
-
-    public void setIdestadoproducto(Integer idestadoproducto) {
-        this.idestadoproducto = idestadoproducto;
-    }
-
-    public Integer getIdtipoproducto() {
-        return idtipoproducto;
-    }
-
-    public void setIdtipoproducto(Integer idtipoproducto) {
-        this.idtipoproducto = idtipoproducto;
-    }
-
-    public Integer getIdproducto() {
-        return idproducto;
-    }
-
-    public void setIdproducto(Integer idproducto) {
-        this.idproducto = idproducto;
-    }
-
+    
     @Override
     public int hashCode() {
         int hash = 0;
