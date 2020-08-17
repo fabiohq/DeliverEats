@@ -22,10 +22,7 @@ import javax.persistence.Table;
 @NamedQueries({
     @NamedQuery(name = "Productoadiciones.findAll", query = "SELECT p FROM Productoadiciones p"),
     @NamedQuery(name = "Productoadiciones.findByIdproductoadiciones", query = "SELECT p FROM Productoadiciones p WHERE p.productoadicionesPK.idproductoadiciones = :idproductoadiciones"),
-    @NamedQuery(name = "Productoadiciones.findByIdadiciones", query = "SELECT p FROM Productoadiciones p WHERE p.productoadicionesPK.idadiciones = :idadiciones"),
-    @NamedQuery(name = "Productoadiciones.findByIdestadoproducto", query = "SELECT p FROM Productoadiciones p WHERE p.idestadoproducto = :idestadoproducto"),
-    @NamedQuery(name = "Productoadiciones.findByIdtipoproducto", query = "SELECT p FROM Productoadiciones p WHERE p.idtipoproducto = :idtipoproducto"),
-    @NamedQuery(name = "Productoadiciones.findByIdproducto", query = "SELECT p FROM Productoadiciones p WHERE p.idproducto = :idproducto")})
+    @NamedQuery(name = "Productoadiciones.findByIdadiciones", query = "SELECT p FROM Productoadiciones p WHERE p.productoadicionesPK.idadiciones = :idadiciones")})
 public class Productoadiciones implements Serializable {
 
     private static final long serialVersionUID = 1L;

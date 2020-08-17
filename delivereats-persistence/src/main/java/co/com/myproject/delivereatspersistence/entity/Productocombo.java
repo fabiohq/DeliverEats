@@ -22,10 +22,7 @@ import javax.persistence.Table;
 @NamedQueries({
     @NamedQuery(name = "Productocombo.findAll", query = "SELECT p FROM Productocombo p"),
     @NamedQuery(name = "Productocombo.findByIdproductocombo", query = "SELECT p FROM Productocombo p WHERE p.productocomboPK.idproductocombo = :idproductocombo"),
-    @NamedQuery(name = "Productocombo.findByIdcombo", query = "SELECT p FROM Productocombo p WHERE p.productocomboPK.idcombo = :idcombo"),
-    @NamedQuery(name = "Productocombo.findByIdestadoproducto", query = "SELECT p FROM Productocombo p WHERE p.idestadoproducto = :idestadoproducto"),
-    @NamedQuery(name = "Productocombo.findByIdtipoproducto", query = "SELECT p FROM Productocombo p WHERE p.idtipoproducto = :idtipoproducto"),
-    @NamedQuery(name = "Productocombo.findByIdproducto", query = "SELECT p FROM Productocombo p WHERE p.idproducto = :idproducto")})
+    @NamedQuery(name = "Productocombo.findByIdcombo", query = "SELECT p FROM Productocombo p WHERE p.productocomboPK.idcombo = :idcombo")})
 public class Productocombo implements Serializable {
 
     private static final long serialVersionUID = 1L;
